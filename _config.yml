@@ -1,0 +1,20 @@
+gems: ['jekyll-assets', 'premailer']
+
+
+title: UC Santa Cruz Email Templates
+email: ttran34@ucsc.edu
+description: UC Santa Cruz Email Templates
+
+# Structure configuration
+source: ./source
+destination: ./build
+
+assets:
+  cache: false
+
+exclude: ['.asset-cache', 'vendor', '.gitignore']
+
+# Build settings
+markdown: kramdown
+kramdown:
+  auto_ids: false

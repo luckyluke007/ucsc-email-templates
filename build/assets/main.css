@@ -1,0 +1,15 @@
+body,
+html {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  margin: 10px 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse; }
+
+.main {
+  background: #f6fafe;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 640px; }
