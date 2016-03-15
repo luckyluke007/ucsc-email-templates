@@ -5,11 +5,49 @@ html {
   padding: 0; }
 
 table {
-  border-collapse: collapse; }
+  border-collapse: collapse !important; }
+
+img {
+  display: block; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffc500;
+  font-weight: normal; }
+
+h1 {
+  font-size: 32px;
+  margin: 5px 0; }
+
+h2 {
+  font-size: 24px; }
+
+h3 {
+  font-size: 19px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h4 {
+  font-size: 13px; }
 
 .main {
-  background: #f6fafe;
+  background: #f2f5f8;
   display: block;
   margin: 0 auto;
   padding: 0;
   width: 640px; }
+
+.full-width {
+  display: block;
+  padding: 10px 15px; }
+
+.title {
+  background: #00458c; }
