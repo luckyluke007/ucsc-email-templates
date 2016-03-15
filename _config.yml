@@ -1,4 +1,4 @@
-gems: ['jekyll-assets', 'premailer']
+gems: ['jekyll-assets']
 
 
 title: UC Santa Cruz Email Templates

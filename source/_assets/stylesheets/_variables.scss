@@ -6,13 +6,21 @@ $mobile: new-breakpoint(max-width 600px 4);
 $font-serif: 'Linux Libertine';
 $font-sans: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
+// FONT-SIZES
 
+$font-h1: 32px;
+$font-h2: 24px;
+$font-h3: 19px;
+$font-h4: 16px;
+$font-h5: 14px;
+$font-h6: 13px;
+$stand-size: 13px;
 // COLORS
 
 $brand-blue: #00458c;
 $brand-gold: #ffc500;
 
-$background: #f6fafe;
+$background: #f2f5f8;
 
 $dark-gray: #333;
 $light-gray: #bcc1c2;
