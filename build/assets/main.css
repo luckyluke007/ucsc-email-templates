@@ -17,11 +17,12 @@ h4,
 h5,
 h6 {
   color: #ffc500;
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: 1.25em; }
 
 h1 {
   font-size: 32px;
-  margin: 5px 0; }
+  margin: 0; }
 
 h2 {
   font-size: 24px; }
