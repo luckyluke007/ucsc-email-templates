@@ -4,7 +4,9 @@ gems: ['jekyll-assets']
 title: UC Santa Cruz Email Templates
 email: ttran34@ucsc.edu
 description: UC Santa Cruz Email Templates
-url: "http://luckyluke007.github.io/ucsc-email-templates/build/"
+url: "http://luckyluke007.github.io"
+
+baseurl: "/ucsc-email-templates/build"
 
 # Structure configuration
 source: ./source
