@@ -5,5 +5,5 @@ UC Santa Cruz  Email Templates
 
 ## Grunt Tasks
 - [Premailer](https://github.com/dwightjack/grunt-premailer) for inline css
-- [Litmus](https://www.npmjs.com/package/grunt-litmus) push litmus for test
+- [Litmus](https://www.npmjs.com/package/grunt-litmus) push Litmus for test
 
