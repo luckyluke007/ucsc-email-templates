@@ -1,10 +1,14 @@
+.header {
+  display: block;
+  padding: 0 0 0 15px; }
+
 body,
 html {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   margin: 10px 0;
   padding: 0; }
 
-table {
+table, td {
   border-collapse: collapse !important; }
 
 img {
@@ -39,6 +43,9 @@ h5 {
 h4 {
   font-size: 13px; }
 
+.logo {
+  padding: 15px; }
+
 .main {
   background: #f2f5f8;
   display: block;
@@ -47,8 +54,9 @@ h4 {
   width: 640px; }
 
 .full-width {
-  display: block;
-  padding: 10px 15px; }
+  padding: 0; }
 
 .title {
-  background: #00458c; }
+  background: #00458c;
+  padding: 10px 15px;
+  width: 640px; }
