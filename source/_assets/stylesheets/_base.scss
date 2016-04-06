@@ -5,7 +5,7 @@ html {
 	padding: 0;
 }
 
-table {
+table, td {
 	border-collapse: collapse !important;
 }
 
@@ -47,4 +47,8 @@ h5 {
 
 h4 {
 	font-size: $font-h6;
+}
+
+.logo {
+	padding: 15px;
 }
