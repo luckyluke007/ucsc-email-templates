@@ -1,26 +1,9 @@
-.header {
-  display: block;
-  padding: 0 0 0 15px; }
-
-body,
-html {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  margin: 10px 0;
-  padding: 0; }
-
-table, td {
-  border-collapse: collapse !important; }
-
-img {
-  display: block; }
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #ffc500;
   font-weight: normal;
   line-height: 1.25em; }
 
@@ -43,6 +26,19 @@ h5 {
 h4 {
   font-size: 13px; }
 
+body,
+html {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  margin: 10px 0;
+  padding: 0;
+  color: #444; }
+
+table, td {
+  border-collapse: collapse !important; }
+
+img {
+  display: block; }
+
 .logo {
   padding: 15px; }
 
@@ -56,7 +52,11 @@ h4 {
 .full-width {
   padding: 0; }
 
+.content {
+  padding: 15px; }
+
 .title {
   background: #00458c;
+  color: #ffc500;
   padding: 10px 15px;
   width: 640px; }

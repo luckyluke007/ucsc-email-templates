@@ -10,8 +10,13 @@
 	padding: 0;
 }
 
+.content {
+	padding: 15px;
+}
+
 .title {
 	background: $brand-blue;
+	color: $brand-gold;
 	padding: 10px 15px;
 	width: 640px;
 }
