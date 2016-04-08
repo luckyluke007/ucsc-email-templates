@@ -17,3 +17,13 @@ img {
 .logo {
 	padding: 15px;
 }
+
+a,
+a:active {
+	color: $brand-blue;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}

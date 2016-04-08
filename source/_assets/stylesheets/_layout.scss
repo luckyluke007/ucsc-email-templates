@@ -11,7 +11,7 @@
 }
 
 .content {
-	padding: 15px;
+	padding: 10px 20px;
 }
 
 .title {
@@ -19,4 +19,26 @@
 	color: $brand-gold;
 	padding: 10px 15px;
 	width: 640px;
+}
+
+.section-title {
+	border-bottom: 2px solid $brand-gold;
+	color: $brand-gold;
+}
+
+.section-content {
+	padding: 0 15px;
+}
+
+.section-content h3,
+.section-content p {
+	margin: 0;
+}
+
+.section-content h3 {
+	padding: 10px 0;
+}
+
+.section-content p {
+	padding: 0 0 18px;
 }
