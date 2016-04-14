@@ -15,6 +15,7 @@ h1 {
 
 h2 {
 	font-size: $font-h2;
+	margin: 0;
 }
 
 h3 {
@@ -51,4 +52,8 @@ h4 {
 	color: $brand-gold;
 	margin: 0;
 	padding: 15px 0 0;
+}
+
+.right-title {
+	text-transform: uppercase;
 }

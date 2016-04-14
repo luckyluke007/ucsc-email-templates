@@ -40,10 +40,16 @@
 	padding: 0;
 }
 
-.section-content .right-column h3 {
-	display: block;
-	font-weight: 500;
-	padding: 15px 0 5px;
+.spacing-top {
+	padding: 10px 0 5px;
+}
+
+.spacing {
+	padding: 5px 0;
+}
+
+.spacing-bottom {
+	padding: 0 0 15px;
 }
 
 .section-content .right-column .event-title {

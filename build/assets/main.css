@@ -12,7 +12,8 @@ h1 {
   margin: 0; }
 
 h2 {
-  font-size: 24px; }
+  font-size: 24px;
+  margin: 0; }
 
 h3 {
   font-size: 19px; }
@@ -43,6 +44,9 @@ h4 {
   margin: 0;
   padding: 15px 0 0; }
 
+.right-title {
+  text-transform: uppercase; }
+
 body,
 html {
   color: #444;
@@ -67,10 +71,6 @@ a:active {
 
 a:hover {
   text-decoration: underline; }
-
-* {
-  margin: 0;
-  padding: 0; }
 
 .main {
   background: #f2f5f8;
@@ -105,10 +105,14 @@ a:hover {
 .section-content .right-column {
   padding: 0; }
 
-.section-content .right-column h3 {
-  display: block;
-  font-weight: 500;
-  padding: 15px 0 5px; }
+.spacing-top {
+  padding: 10px 0 5px; }
+
+.spacing {
+  padding: 5px 0; }
+
+.spacing-bottom {
+  padding: 0 0 15px; }
 
 .section-content .right-column .event-title {
   display: block;
