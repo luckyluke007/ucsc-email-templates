@@ -26,18 +26,15 @@ h5 {
 h4 {
   font-size: 13px; }
 
-.section-title h2 {
+.section-title {
   margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding: 0 15px; }
 
-.sub-section-title h2 {
+.sub-section-title {
   margin: 0;
   padding: 0; }
 
-.right-column-title h3 {
+.right-column-title {
   margin: 0;
   padding: 0; }
 
@@ -65,6 +62,10 @@ a:active {
 
 a:hover {
   text-decoration: underline; }
+
+* {
+  margin: 0;
+  padding: 0; }
 
 .main {
   background: #f2f5f8;
@@ -105,15 +106,26 @@ a:hover {
 .section-content p {
   padding: 0 0 18px; }
 
-.left-column {
+.section-content .left-column {
   border-right: 1px solid #ffc500;
   padding: 0 10px 0 0; }
 
-.right-column {
+.section-content .right-column {
   padding: 0; }
 
-.right-column strong {
-  padding: 5px 0; }
+.section-content .right-column h3 {
+  display: block;
+  font-weight: 500;
+  padding: 15px 0 5px; }
+
+.section-content .right-column .event-title {
+  display: block;
+  font-weight: 500;
+  padding: 10px 0 5px; }
+
+.section-content .right-column p {
+  display: block;
+  padding: 0 0 10px; }
 
 .right-column .separator {
   border-bottom: 1px solid #00458c;

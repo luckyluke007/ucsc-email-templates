@@ -49,17 +49,30 @@
 	padding: 0 0 18px;
 }
 
-.left-column {
+.section-content .left-column {
 	border-right: 1px solid $brand-gold;
 	padding: 0 10px 0 0;
 }
 
-.right-column {
+.section-content .right-column {
 	padding: 0;
 }
 
-.right-column strong {
-	padding: 5px 0;
+.section-content .right-column h3 {
+	display: block;
+	font-weight: 500;
+	padding: 15px 0 5px;
+}
+
+.section-content .right-column .event-title {
+	display: block;
+	font-weight: 500;
+	padding: 10px 0 5px;
+}
+
+.section-content .right-column p {
+	display: block;
+	padding: 0 0 10px;
 }
 
 .right-column .separator {
