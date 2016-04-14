@@ -26,6 +26,12 @@
 	color: $brand-gold;
 }
 
+.sub-section-title {
+	//border-bottom: 2px solid $brand-gold;
+	color: $brand-gold;
+}
+
+
 .section-content {
 	padding: 0 15px;
 }
@@ -41,4 +47,25 @@
 
 .section-content p {
 	padding: 0 0 18px;
+}
+
+.left-column {
+	border-right: 1px solid $brand-gold;
+	padding: 0 10px 0 0;
+}
+
+.right-column {
+	padding: 0;
+}
+
+.right-column strong {
+	display: block;
+	padding: 5px 0;
+}
+
+.right-column .separator {
+	border-bottom: 1px solid $brand-blue;
+	font-weight: 500;
+	padding: 10px 0 5px;
+	text-align: right;
 }

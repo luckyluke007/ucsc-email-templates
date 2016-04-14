@@ -33,12 +33,21 @@ h4 {
   padding-left: 15px;
   padding-right: 15px; }
 
+.sub-section-title h2 {
+  margin: 0;
+  padding: 0; }
+
+.right-column-title h3 {
+  margin: 0;
+  padding: 0; }
+
 body,
 html {
+  color: #444;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  line-height: 20px;
   margin: 10px 0;
-  padding: 0;
-  color: #444; }
+  padding: 0; }
 
 table, td {
   border-collapse: collapse !important; }
@@ -80,6 +89,9 @@ a:hover {
   border-bottom: 2px solid #ffc500;
   color: #ffc500; }
 
+.sub-section-title {
+  color: #ffc500; }
+
 .section-content {
   padding: 0 15px; }
 
@@ -92,3 +104,20 @@ a:hover {
 
 .section-content p {
   padding: 0 0 18px; }
+
+.left-column {
+  border-right: 1px solid #ffc500;
+  padding: 0 10px 0 0; }
+
+.right-column {
+  padding: 0; }
+
+.right-column strong {
+  display: block;
+  padding: 5px 0; }
+
+.right-column .separator {
+  border-bottom: 1px solid #00458c;
+  font-weight: 500;
+  padding: 10px 0 5px;
+  text-align: right; }
