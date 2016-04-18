@@ -1,0 +1,12 @@
+@media only screen and (max-device-width: 479px) {
+ 
+ img[class="mFullImage"] { 
+ 	width:100%!important; 
+ 	height:auto!important; 
+ }
+
+ *[class~="mWidth"] { 
+ 	width:100%!important; 
+ }
+
+}
