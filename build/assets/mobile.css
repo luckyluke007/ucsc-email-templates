@@ -1,7 +1,209 @@
-@media only screen and (max-device-width: 479px) {
+/*------------------------------------*\
+   EMAIL CLIENT SPECIFIC STYLES
+\*------------------------------------*/
+.ReadMsgBody, .ExternalClass {
+  width: 100%; }
+
+/* Force Hotmail/Outlook.com to display emails at full width */
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+  line-height: 100%; }
+
+/* Force Hotmail/Outlook.com to display normal line spacing */
+body, table, td, p, a, li, blockquote {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* Prevent WebKit and Windows mobile from changing default text sizes */
+table, td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt; }
+
+/* Removes spacing between tables in Outlook 2007 and up */
+img {
+  -ms-interpolation-mode: bicubic; }
+
+/* Allows smoother rendering of resized images in Internet Explorer */
+.footer a {
+  color: #ffffff;
+  text-decoration: none; }
+
+/* Add this class to the system footer to change the unsubscribe link ---does not work for Gmail--- */
+.iOSfix a {
+  color: #ffffff;
+  text-decoration: none; }
+
+/* Override the default blue link style that iOS puts on address and phone numbers */
+.iOSfixaside a {
+  color: #000000;
+  text-decoration: none; }
+
+/* Alternate Style - Override the default blue link style that iOS puts on address and phone numbers */
+.em-dragdrop-dummy {
+  display: none !important; }
+
+/*------------------------------------*\
+   RESET STYLES
+\*------------------------------------*/
+body {
+  min-width: 100% !important; }
+
+html {
+  width: 100%; }
+
+img {
+  border: 0;
+  height: auto;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none; }
+
+table {
+  border-collapse: collapse !important; }
+
+body, .emWrapperTable, .emWrapperCell {
+  height: 100% !important;
+  margin: 0;
+  padding: 0; }
+
+.mobileHeaderWidth .em-dockitem-empty, .mobileFooterWidth .em-dockitem-empty, .emWrapperTable, .emWrapperCell {
+  width: 100% !important; }
+
+div {
+  padding: 0px !important; }
+
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  margin: 0px; }
+
+p {
+  margin: 0em 0em 1em;
+  margin-bottom: 1em; }
+
+/*------------------------------------*\
+   MOBILE STYLES
+\*------------------------------------*/
+@media only screen and (max-device-width: 720px) {
+  td[class="mobileHeaderCell"],
+  td[class="mobileColumnCell"],
+  td[class="mobileFooterCell"],
+  td[class~="mWidth"] {
+    display: block !important; }
+
+  table[class="mobileHeaderWidth"],
+  table[class="mobileColumnWidth"],
+  table[class="mobileFooterWidth"],
+  td[class="mobileHeaderCell"],
+  td[class="mobileColumnCell"],
+  td[class="mobileFooterCell"] {
+    width: 100% !important; }
+
+  *[class~="mWidth"] {
+    width: 100% !important; }
+
+  /* general display styles */
+  td {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  *[class="mHide"] {
+    display: none !important; }
+
+  *[class="mBreak"] {
+    display: block !important; }
+
+  *[class="mTextCenter"] {
+    text-align: center !important; }
+
+  *[class="mCenter"] {
+    margin: 0px auto !important; }
+
+  /* link styles */
+  /* image styles */
   img[class="mFullImage"] {
     width: 100% !important;
     height: auto !important; }
 
-  *[class~="mWidth"] {
-    width: 100% !important; } }
+  /* Custom */
+  /* Header */
+  table[class="structHead"] {
+    width: 100% !important; }
+
+  table[class="structHead"] td {
+    text-align: center !important; }
+
+  img[class="logoImg"] {
+    display: inline-block !important; }
+
+  table[class="structHead"] td[class="date"] {
+    padding-bottom: 10px !important;
+    padding-top: 0 !important; }
+
+  table[class="structHead"] td[class="title"] {
+    font-size: 23px !important;
+    padding-top: 0 !important; }
+
+  img[class="logoImg"] {
+    width: 245px; }
+
+  /* Events */
+  td[class~="twoColEventsFeatured"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+
+  td[class~="twoColEventsFeatured"] td[class~="title"],
+  td[class~="twoColEventsFeatured"] td[class~="text"],
+  td[class~="twoColEventsFeatured"] td[class~="more"] {
+    padding-left: 10px !important;
+    padding-right: 10px !important; }
+
+  /* Two Col Feature Items */
+  td[class~="twoColItem"] {
+    padding: 0 !important; }
+
+  td[class~="twoColItem"] td[class~="title"] {
+    padding-left: 14px !important;
+    padding-right: 14px !important; }
+
+  td[class~="twoColItem"] td[class~="text"] {
+    padding-left: 14px !important;
+    padding-right: 14px !important; }
+
+  /* Two Col 70/30 - 30/70 */
+  td[class~="twoColItem"] {
+    clear: both; }
+
+  td[class~="twoColItemSmall"] {
+    clear: both;
+    padding-left: 0 !important; }
+
+  td[class~="twoColItemSmall"] table[class~="image"] {
+    width: 50% !important;
+    float: left; }
+
+  td[class~="twoColItemSmall"] table[class~="image"] td {
+    padding-bottom: 20px !important; }
+
+  td[class~="twoColItemSmall"] table[class~="text"] {
+    width: 50% !important;
+    float: left; }
+
+  td[class~="twoColItemSmall"] table[class~="text"] td[class~="title"] {
+    padding-left: 10px !important;
+    padding-bottom: 5px !important;
+    padding-top: 8px !important; }
+
+  td[class~="twoColItemSmall"] table[class~="text"] td[class~="text"] {
+    padding-left: 10px !important;
+    padding-bottom: 20px !important; }
+
+  /* Footer */
+  td[class~="horizontalRule"] {
+    padding-left: 5px !important;
+    padding-right: 5px !important; }
+
+  /*td[class~="socialFooter"] td[class~="socialIcon"] {float: left; width:33.3333% !important; padding-top:5px !important; padding-bottom:5px !important;}
+  td[class~="socialFooter"] td[class~="socialIcon2"] {width:50% !important;}*/ }
+@media only screen and (max-device-width: 479px) {
+  /* general display styles */
+  /* link styles */
+  /* image styles */ }
