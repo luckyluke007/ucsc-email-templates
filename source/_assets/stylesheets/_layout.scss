@@ -14,24 +14,6 @@
 	padding: 10px 20px;
 }
 
-.title {
-	background: $brand-blue;
-	color: $brand-gold;
-	padding: 10px 15px;
-	width: 640px;
-}
-
-.section-title {
-	border-bottom: 2px solid $brand-gold;
-	color: $brand-gold;
-}
-
-.sub-section-title {
-	//border-bottom: 2px solid $brand-gold;
-	color: $brand-gold;
-}
-
-
 .section-content {
 	padding: 0 15px;
 }
@@ -42,28 +24,41 @@
 }
 
 .section-content h3 {
-	padding: 10px 0;
-}
-
-.section-content p {
-	padding: 0 0 18px;
-}
-
-.left-column {
-	border-right: 1px solid $brand-gold;
-	padding: 0 10px 0 0;
-}
-
-.right-column {
 	padding: 0;
 }
 
-.right-column strong {
-	display: block;
+.section-content p {
+	padding: 5px 0 10px;
+}
+
+.section-content .left-column {
+	border-right: 1px solid $brand-gold;
+	padding-right: 10px;
+}
+
+.section-content .right-column {
+	padding: 0;
+}
+
+.spacing-top {
+	padding: 10px 0 5px;
+}
+
+.spacing {
 	padding: 5px 0;
 }
 
-.right-column .separator {
+.spacing-bottom {
+	padding: 0 0 15px;
+}
+
+.section-content .right-column .event-title {
+	display: block;
+	font-weight: 500;
+	padding: 10px 0 5px;
+}
+
+.separator {
 	border-bottom: 1px solid $brand-blue;
 	font-weight: 500;
 	padding: 10px 0 5px;
