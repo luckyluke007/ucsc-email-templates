@@ -12,7 +12,17 @@
   <link rel="stylesheet" type="text/css" media="screen" href="{% asset_path mobile.css %}" />
   -->
   
-  <link rel="stylesheet" type="text/css" media="screen" href="http://luckyluke007.github.io/ucsc-email-templates/build/assets/mobile.css" /> 
+  <style type="text/css" rel="stylesheet">
+    @media only screen and (max-device-width: 599px) {
+      .mFullImage {
+        width: 100% !important;
+        height: auto !important; 
+      }
+
+      .mWidth {
+        width: 100% !important; } 
+      }
+  </style>
   <link rel="stylesheet" type="text/css" media="screen" href="http://luckyluke007.github.io/ucsc-email-templates/build/assets/main.css" />
  
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
