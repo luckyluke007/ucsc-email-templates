@@ -1,4 +1,4 @@
-@media only screen and (max-device-width: 720px) {
+@media only screen and (max-device-width: 599px) {
   img .mFullImage {
     width: 100% !important;
     height: auto !important; }
