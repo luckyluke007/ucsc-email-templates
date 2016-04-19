@@ -11,22 +11,23 @@
   <link rel="stylesheet" type="text/css" media="screen" href="{% asset_path main.css %}" />
   <link rel="stylesheet" type="text/css" media="screen" href="{% asset_path mobile.css %}" />
   -->
-  
+
   <style type="text/css" rel="stylesheet">
     @media only screen and (max-device-width: 599px) {
- 
-     img .mFullImage { 
+     /* Images */ 
+     .mFullImage { 
       width:100%!important; 
       height:auto!important; 
      }
-
-     td .mWidth { 
+     /* TD or table */ 
+     .mWidth { 
       width:100%!important; 
       font-size: 16px !important;
      }
 
     }
   </style>
+  
   <link rel="stylesheet" type="text/css" media="screen" href="http://luckyluke007.github.io/ucsc-email-templates/build/assets/main.css" />
  
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
