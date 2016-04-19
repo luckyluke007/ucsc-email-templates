@@ -4,4 +4,5 @@
     height: auto !important; }
 
   td .mWidth {
-    width: 100% !important; } }
+    width: 100% !important;
+    font-size: 16px !important; } }
