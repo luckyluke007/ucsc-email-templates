@@ -1,7 +1,7 @@
 @media only screen and (max-device-width: 480px) {
-  img[class="mFullImage"] {
+  img .mFullImage {
     width: 100% !important;
     height: auto !important; }
 
-  td[class~="mWidth"] {
+  td .mWidth {
     width: 100% !important; } }
