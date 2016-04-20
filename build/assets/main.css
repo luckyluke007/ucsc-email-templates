@@ -107,10 +107,10 @@ a:hover {
   padding: 5px 0 10px; }
 
 .section-content .left-column {
-  padding-right: 10px; }
+  padding-right: 0; }
 
 .section-content .right-column {
-  padding: 5px; }
+  padding: 5px 0 5px 10px; }
 
 .spacing-top {
   padding: 10px 0 5px; }
