@@ -37,8 +37,9 @@
 }
 
 .section-content .right-column {
-	background: $right-column-background;
-	padding: 5px 7px;
+	border-right: 1px solid $light-gray;
+	border-left: 1px solid $light-gray;
+	padding: 5px;
 }
 
 .spacing-top {
