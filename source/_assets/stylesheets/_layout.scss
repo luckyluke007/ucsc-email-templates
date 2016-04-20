@@ -32,11 +32,12 @@
 }
 
 .section-content .left-column {
-	border-right: 1px solid $brand-gold;
+	//border-right: 1px solid $brand-gold;
 	padding-right: 10px;
 }
 
 .section-content .right-column {
+	background: $white;
 	padding: 0;
 }
 

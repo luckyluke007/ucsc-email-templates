@@ -107,10 +107,10 @@ a:hover {
   padding: 5px 0 10px; }
 
 .section-content .left-column {
-  border-right: 1px solid #ffc500;
   padding-right: 10px; }
 
 .section-content .right-column {
+  background: #fff;
   padding: 0; }
 
 .spacing-top {
