@@ -114,7 +114,6 @@ a:hover {
   padding: 0; }
 
 .spacing-top {
-  border-top: 1px solid #00458c;
   padding: 10px 0 5px; }
 
 .spacing {
@@ -133,3 +132,6 @@ a:hover {
   font-weight: 500;
   padding: 10px 0 5px;
   text-align: right; }
+
+.border-top {
+  border-top: 1px solid #00458c; }
