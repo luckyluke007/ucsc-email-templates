@@ -107,6 +107,7 @@ a:hover {
   padding: 5px 0 10px; }
 
 .section-content .left-column {
+  border-top: 1px solid #00458c;
   border-right: 1px solid #ffc500;
   padding-right: 10px; }
 
