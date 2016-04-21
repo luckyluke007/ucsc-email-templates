@@ -94,7 +94,8 @@ a:hover {
   padding: 10px 20px; }
 
 .section-content {
-  padding: 0 15px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .section-content h3,
 .section-content p {
@@ -110,10 +111,11 @@ a:hover {
   padding-right: 0; }
 
 .section-content .right-column {
-  padding: 5px 0 5px 10px; }
+  padding: 5px 0 5px 15px; }
 
 .spacing-top {
-  padding: 10px 0 5px; }
+  padding-bottom: 5px;
+  padding-top: 10px; }
 
 .spacing {
   padding: 5px 0; }
