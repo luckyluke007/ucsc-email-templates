@@ -123,6 +123,12 @@ a:hover {
 .spacing-bottom {
   padding: 0 0 15px; }
 
+.spacing-left {
+  padding-left: 10px; }
+
+.spacing-right {
+  padding-right: 10px; }
+
 .section-content .right-column .event-title {
   display: block;
   font-weight: 500;
