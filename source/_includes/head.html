@@ -2,12 +2,34 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <!-- <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title> -->
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <!--
   <link rel="stylesheet" type="text/css" media="screen" href="{% asset_path main.css %}" />
-  <!-- <link rel="stylesheet" type="text/css" media="screen" href="http://luckyluke007.github.io/ucsc-email-templates/build/assets/main.css" /> -->
+  <link rel="stylesheet" type="text/css" media="screen" href="{% asset_path mobile.css %}" />
+  -->
+
+  <style type="text/css" rel="stylesheet">
+    @media only screen and (max-device-width: 599px) {
+     /* Images */ 
+     .mFullImage { 
+      width:100%!important; 
+      height:auto!important; 
+     }
+     /* TD or table */ 
+     .mWidth { 
+      width:100%!important; 
+      font-size: 16px !important;
+     }
+
+    }
+  </style>
+  
+  <link rel="stylesheet" type="text/css" media="screen" href="http://luckyluke007.github.io/ucsc-email-templates/build/assets/main.css" />
+ 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 </head>

@@ -1,3 +1,7 @@
+html,
+body {
+  font-size: 14px; }
+
 h1,
 h2,
 h3,
@@ -27,6 +31,9 @@ h5 {
 h4 {
   font-size: 13px; }
 
+p {
+  font-size: 16px; }
+
 .title {
   background: #00458c;
   color: #ffc500;
@@ -45,6 +52,7 @@ h4 {
   padding: 15px 0 0; }
 
 .right-title {
+  color: #ffc500;
   text-transform: uppercase; }
 
 body,
@@ -86,7 +94,8 @@ a:hover {
   padding: 10px 20px; }
 
 .section-content {
-  padding: 0 15px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .section-content h3,
 .section-content p {
@@ -99,14 +108,14 @@ a:hover {
   padding: 5px 0 10px; }
 
 .section-content .left-column {
-  border-right: 1px solid #ffc500;
-  padding-right: 10px; }
+  padding-right: 0; }
 
 .section-content .right-column {
-  padding: 0; }
+  padding: 5px 0 5px 15px; }
 
 .spacing-top {
-  padding: 10px 0 5px; }
+  padding-bottom: 5px;
+  padding-top: 10px; }
 
 .spacing {
   padding: 5px 0; }
@@ -124,3 +133,6 @@ a:hover {
   font-weight: 500;
   padding: 10px 0 5px;
   text-align: right; }
+
+.border-top {
+  border-top: 1px solid #00458c; }

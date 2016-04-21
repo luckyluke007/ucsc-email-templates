@@ -6,9 +6,9 @@
   body, table, td, p, a, li, blockquote { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; } /* Prevent WebKit and Windows mobile from changing default text sizes */
   table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; } /* Removes spacing between tables in Outlook 2007 and up */
   img { -ms-interpolation-mode:bicubic; } /* Allows smoother rendering of resized images in Internet Explorer */
-  .footer a { color:/*#ffffff*/; text-decoration:none; } /* Add this class to the system footer to change the unsubscribe link ---does not work for Gmail--- */
-  .iOSfix a { color:/*#ffffff*/; text-decoration:none; } /* Override the default blue link style that iOS puts on address and phone numbers */
-  .iOSfixaside a { color:/*#000000*/; text-decoration:none; } /* Alternate Style - Override the default blue link style that iOS puts on address and phone numbers */
+  .footer a { color:#ffffff; text-decoration:none; } /* Add this class to the system footer to change the unsubscribe link ---does not work for Gmail--- */
+  .iOSfix a { color:#ffffff; text-decoration:none; } /* Override the default blue link style that iOS puts on address and phone numbers */
+  .iOSfixaside a { color:#000000; text-decoration:none; } /* Alternate Style - Override the default blue link style that iOS puts on address and phone numbers */
   .em-dragdrop-dummy { display:none!important; }	
 
 /*------------------------------------*\
