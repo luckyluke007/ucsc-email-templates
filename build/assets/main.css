@@ -81,9 +81,6 @@ a:active {
 a:hover {
   text-decoration: underline; }
 
-p {
-  padding: 10px 0; }
-
 .spacing-top {
   padding-bottom: 5px;
   padding-top: 10px; }
