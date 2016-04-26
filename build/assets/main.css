@@ -57,9 +57,8 @@ p {
   text-transform: uppercase; }
 
 .footer-title {
-  background: #00458c;
   border-bottom: 1px #00458c dotted;
-  color: #ffc500;
+  color: #00458c;
   padding: 10px 15px;
   width: 640px;
   text-transform: uppercase; }
