@@ -44,7 +44,8 @@ p {
   border-bottom: 2px solid #ffc500;
   color: #ffc500;
   margin: 0;
-  padding: 15px 15px 5px; }
+  padding: 20px 15px 5px;
+  text-transform: uppercase; }
 
 .sub-section-title {
   color: #ffc500;
