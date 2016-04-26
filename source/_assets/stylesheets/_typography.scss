@@ -76,3 +76,11 @@ p {
 	width: 640px;
 	text-transform: uppercase;
 }
+
+.footer-title h3 {
+	border-bottom: 1px $brand-blue dotted;
+	color: $brand-blue;
+	padding: 0;
+	width: 640px;
+	text-transform: uppercase;
+}

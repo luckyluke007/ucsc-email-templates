@@ -66,3 +66,11 @@
 	border-top: 1px solid $brand-blue;
 }
 
+.footer-title {
+	border-bottom: 1px $brand-blue dotted;
+	color: $brand-blue;
+	padding: 10px 15px;
+	width: 640px;
+	text-transform: uppercase;
+}
+

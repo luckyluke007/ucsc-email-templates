@@ -63,6 +63,13 @@ p {
   width: 640px;
   text-transform: uppercase; }
 
+.footer-title h3 {
+  border-bottom: 1px #00458c dotted;
+  color: #00458c;
+  padding: 0;
+  width: 640px;
+  text-transform: uppercase; }
+
 body,
 html {
   color: #444;
@@ -169,3 +176,10 @@ a:hover {
 
 .border-top {
   border-top: 1px solid #00458c; }
+
+.footer-title {
+  border-bottom: 1px #00458c dotted;
+  color: #00458c;
+  padding: 10px 15px;
+  width: 640px;
+  text-transform: uppercase; }
