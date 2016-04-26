@@ -180,6 +180,6 @@ a:hover {
 .footer-title {
   border-bottom: 1px #00458c dotted;
   color: #00458c;
-  padding: 10px 15px;
+  padding: 10px 0;
   width: 640px;
   text-transform: uppercase; }
