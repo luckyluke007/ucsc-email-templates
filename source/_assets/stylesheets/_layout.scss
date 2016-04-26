@@ -67,13 +67,10 @@
 }
 
 .footer-title {
+	border-top: 1px $brand-blue dotted;
 	color: $brand-blue;
 	padding: 10px 0;
 	text-transform: uppercase;
-}
-
-.social-border {
-	border-top: 1px $brand-blue dotted;
 }
 
 .end-border {
