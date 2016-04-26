@@ -56,6 +56,14 @@ p {
   color: #ffc500;
   text-transform: uppercase; }
 
+.footer-title {
+  background: #00458c;
+  border-bottom: 1px #00458c dotted;
+  color: #ffc500;
+  padding: 10px 15px;
+  width: 640px;
+  text-transform: uppercase; }
+
 body,
 html {
   color: #444;

@@ -68,3 +68,12 @@ p {
 	color: $brand-gold;
 	text-transform: uppercase;
 }
+
+.footer-title {
+	background: $brand-blue;
+	border-bottom: 1px $brand-blue dotted;
+	color: $brand-gold;
+	padding: 10px 15px;
+	width: 640px;
+	text-transform: uppercase;
+}
