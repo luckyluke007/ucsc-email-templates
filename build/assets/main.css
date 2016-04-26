@@ -80,6 +80,35 @@ a:active {
 a:hover {
   text-decoration: underline; }
 
+.spacing-top {
+  padding-bottom: 5px;
+  padding-top: 10px; }
+
+.spacing-top-bottom {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.spacing-bottom {
+  padding-bottom: 15px; }
+
+.spacing-left {
+  padding-left: 10px; }
+
+.spacing-right {
+  padding-right: 10px; }
+
+.large-spacing-right {
+  padding-right: 15px; }
+
+.large-spacing-left {
+  padding-left: 15px; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
 .main {
   background: #f2f5f8;
   display: block;
@@ -113,23 +142,6 @@ a:hover {
 .section-content .right-column {
   padding: 5px; }
 
-.spacing-top {
-  padding-bottom: 5px;
-  padding-top: 10px; }
-
-.spacing-top-bottom {
-  padding-top: 5px;
-  padding-bottom: 5px; }
-
-.spacing-bottom {
-  padding-bottom: 15px; }
-
-.spacing-left {
-  padding-left: 10px; }
-
-.spacing-right {
-  padding-right: 10px; }
-
 .section-content .right-column .event-title {
   display: block;
   font-weight: 500;
@@ -138,7 +150,7 @@ a:hover {
 .separator {
   border-bottom: 1px solid #00458c;
   font-weight: 500;
-  padding: 10px 0 5px;
+  padding: 5px 0 10px;
   text-align: right; }
 
 .border-top {
