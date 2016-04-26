@@ -174,3 +174,6 @@ a:hover {
   color: #00458c;
   padding: 10px 0;
   text-transform: uppercase; }
+
+.end-border {
+  border-bottom: 3px #00458c solid; }
