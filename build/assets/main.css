@@ -56,6 +56,12 @@ p {
   color: #ffc500;
   text-transform: uppercase; }
 
+.footer-title h3 {
+  color: #00458c;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase; }
+
 body,
 html {
   color: #444;
@@ -154,5 +160,17 @@ a:hover {
   padding: 5px 0 10px;
   text-align: right; }
 
+.separator-bottom {
+  border-top: 1px solid #00458c;
+  font-weight: 500;
+  padding: 0 0 5px;
+  text-align: right; }
+
 .border-top {
   border-top: 1px solid #00458c; }
+
+.footer-title {
+  border-bottom: 1px #00458c dotted;
+  color: #00458c;
+  padding: 10px 0;
+  text-transform: uppercase; }
