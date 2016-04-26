@@ -28,3 +28,41 @@ a:active {
 a:hover {
 	text-decoration: underline;
 }
+
+.spacing-top {
+	padding-bottom: 5px;
+	padding-top: 10px;
+}
+
+.spacing-top-bottom {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.spacing-bottom {
+	padding-bottom: 15px;
+}
+
+.spacing-left {
+	padding-left: 10px
+}
+
+.spacing-right {
+	padding-right: 10px;
+}
+
+.large-spacing-right {
+	padding-right: 15px;
+}
+
+.large-spacing-left {
+	padding-left: 15px;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
