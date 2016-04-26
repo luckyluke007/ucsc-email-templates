@@ -154,5 +154,11 @@ a:hover {
   padding: 5px 0 10px;
   text-align: right; }
 
+.separator-bottom {
+  border-bottom: 1px solid #00458c;
+  font-weight: 500;
+  padding: 5px 0;
+  text-align: right; }
+
 .border-top {
   border-top: 1px solid #00458c; }
