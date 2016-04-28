@@ -71,7 +71,8 @@ html {
   padding: 0; }
 
 table, td {
-  border-collapse: collapse !important; }
+  border-collapse: collapse !important;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
 
 .layout-fixed {
   table-layout: fixed;
@@ -135,6 +136,7 @@ a:hover {
 
 .section-content {
   color: #333;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   padding-left: 15px;
   padding-right: 15px; }
 
@@ -152,7 +154,8 @@ a:hover {
   padding-right: 0; }
 
 .section-content .right-column {
-  padding: 5px; }
+  padding-right: 5px;
+  padding-left: 5px; }
 
 .section-content .right-column .event-title {
   display: block;
