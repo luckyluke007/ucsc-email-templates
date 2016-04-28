@@ -11,6 +11,11 @@ table, td {
 	border-collapse: collapse !important;
 }
 
+.layout-fixed {
+	table-layout: fixed;
+	margin: 0 auto;
+}
+
 img {
 	display: block;
 }
