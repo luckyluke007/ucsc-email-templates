@@ -7,26 +7,10 @@
   <!-- <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title> -->
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <!--
-  <link rel="stylesheet" type="text/css" media="screen" href="{% asset_path main.css %}" />
-  <link rel="stylesheet" type="text/css" media="screen" href="{% asset_path mobile.css %}" />
-  -->
+  
+  <!--<link rel="stylesheet" type="text/css" media="screen" href="{% asset_path main.css %}" />-->
 
-  <style type="text/css" rel="stylesheet">
-    @media only screen and (max-device-width: 599px) {
-     /* Images */ 
-     .mFullImage { 
-      width:100%!important; 
-      height:auto!important; 
-     }
-     /* TD or table */ 
-     .mWidth { 
-      width:100%!important; 
-      font-size: 16px !important;
-     }
-
-    }
-  </style>
+  {% include responsive-css.html %}
   
   <link rel="stylesheet" type="text/css" media="screen" href="http://luckyluke007.github.io/ucsc-email-templates/build/assets/main.css" />
  

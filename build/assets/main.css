@@ -1,3 +1,6 @@
+.none {
+  display: none; }
+
 html,
 body {
   font-size: 14px; }
@@ -64,14 +67,19 @@ p {
 
 body,
 html {
-  color: #444;
+  color: #333;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   line-height: 20px;
   margin: 10px 0;
   padding: 0; }
 
 table, td {
-  border-collapse: collapse !important; }
+  border-collapse: collapse !important;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+.layout-fixed {
+  table-layout: fixed;
+  margin: 0 auto; }
 
 img {
   display: block; }
@@ -104,6 +112,9 @@ a:hover {
 .spacing-right {
   padding-right: 10px; }
 
+.spacing-right-column {
+  padding: 10px 0 5px 5px; }
+
 .large-spacing-right {
   padding-right: 15px; }
 
@@ -130,6 +141,8 @@ a:hover {
   padding: 10px 20px; }
 
 .section-content {
+  color: #333;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   padding-left: 15px;
   padding-right: 15px; }
 
@@ -144,10 +157,13 @@ a:hover {
   padding: 5px 0 10px; }
 
 .section-content .left-column {
-  padding-right: 0; }
+  padding-right: 10px; }
 
 .section-content .right-column {
-  padding: 5px; }
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 0;
+  padding-top: 10px; }
 
 .section-content .right-column .event-title {
   display: block;

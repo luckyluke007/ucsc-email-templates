@@ -1,6 +1,6 @@
 body,
 html {
-	color: #444;
+	color: $dark-gray;
 	font-family: $font-sans;
 	line-height: 20px;
 	margin: 10px 0;
@@ -9,6 +9,12 @@ html {
 
 table, td {
 	border-collapse: collapse !important;
+	font-family: $font-sans;
+}
+
+.layout-fixed {
+	table-layout: fixed;
+	margin: 0 auto;
 }
 
 img {
@@ -49,6 +55,10 @@ a:hover {
 
 .spacing-right {
 	padding-right: 10px;
+}
+
+.spacing-right-column {
+	padding: 10px 0 5px 5px;
 }
 
 .large-spacing-right {

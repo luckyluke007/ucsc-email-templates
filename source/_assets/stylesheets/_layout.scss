@@ -15,6 +15,8 @@
 }
 
 .section-content {
+	color: $dark-gray;
+	font-family: $font-sans;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -34,11 +36,14 @@
 
 .section-content .left-column {
 	//border-right: 1px solid $brand-gold;
-	padding-right: 0;
+	padding-right: 10px;
 }
 
 .section-content .right-column {
-	padding: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 0;
+	padding-top: 10px;
 }
 
 .section-content .right-column .event-title {
@@ -76,4 +81,3 @@
 .end-border {
 	border-bottom: 3px $brand-blue solid;
 }
-
