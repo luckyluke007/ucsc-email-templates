@@ -109,6 +109,9 @@ a:hover {
 .spacing-right {
   padding-right: 10px; }
 
+.spacing-right-column {
+  padding: 10px 0 5px 5px; }
+
 .large-spacing-right {
   padding-right: 15px; }
 
@@ -154,8 +157,10 @@ a:hover {
   padding-right: 10px; }
 
 .section-content .right-column {
-  padding-right: 5px;
-  padding-left: 5px; }
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 0;
+  padding-top: 10px; }
 
 .section-content .right-column .event-title {
   display: block;
