@@ -65,6 +65,10 @@ p {
   margin: 0;
   text-transform: uppercase; }
 
+.caption {
+  font-size: 11px;
+  color: #bcc1c2; }
+
 body,
 html {
   color: #333;
@@ -142,6 +146,9 @@ a:hover {
 
 .content {
   padding: 10px 20px; }
+
+.caption {
+  padding: 5px 15px; }
 
 .section-content {
   color: #333;
