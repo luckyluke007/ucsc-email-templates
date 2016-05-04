@@ -81,6 +81,9 @@ table, td {
   table-layout: fixed;
   margin: 0 auto; }
 
+.block {
+  display: block !important; }
+
 img {
   display: block; }
 
