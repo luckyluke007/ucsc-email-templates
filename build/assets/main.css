@@ -65,9 +65,9 @@ p {
   margin: 0;
   text-transform: uppercase; }
 
-.caption {
+.caption-text {
   color: #bcc1c2;
-  font-size: 11px; }
+  font-size: 12px; }
 
 body,
 html {
