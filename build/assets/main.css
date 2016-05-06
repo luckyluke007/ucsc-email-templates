@@ -81,6 +81,10 @@ table, td {
   border-collapse: collapse !important;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
 
+table {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt; }
+
 .layout-fixed {
   table-layout: fixed;
   margin: 0 auto; }
