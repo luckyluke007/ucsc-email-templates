@@ -12,6 +12,11 @@ table, td {
 	font-family: $font-sans;
 }
 
+table {
+	mso-table-lspace: 0pt; 
+	mso-table-rspace: 0pt;
+}
+
 .layout-fixed {
 	table-layout: fixed;
 	margin: 0 auto;

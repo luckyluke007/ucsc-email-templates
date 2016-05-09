@@ -69,6 +69,15 @@ p {
   color: #333;
   font-size: 12px; }
 
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
 body,
 html {
   color: #333;
@@ -80,6 +89,10 @@ html {
 table, td {
   border-collapse: collapse !important;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+table {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt; }
 
 .layout-fixed {
   table-layout: fixed;
@@ -203,3 +216,6 @@ a:hover {
 
 .end-border {
   border-bottom: 3px #00458c solid; }
+
+.border-columns-fixed {
+  border: 1px solid #005c9f; }
