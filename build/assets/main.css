@@ -103,7 +103,8 @@ table {
   display: block !important; }
 
 img {
-  display: block; }
+  display: block;
+  padding-bottom: 5px; }
 
 .logo {
   padding: 15px; }
