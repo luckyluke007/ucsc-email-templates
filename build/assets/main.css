@@ -109,6 +109,10 @@ img {
 .logo {
   padding: 15px; }
 
+.logo-blue {
+  background: #00458c;
+  padding: 15px; }
+
 a,
 a:active {
   color: #00458c;
