@@ -30,8 +30,8 @@
 
 
   	<tr>
-  		<td class="full-width mWidth" style="border-collapse: collapse !important; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; padding: 0;">
-  			<img src="{$siteURL}{$feature-image}" alt="{$feature-alt}" width="640" height="325" class="mFullImage" style="display: block; padding-bottom: 5px;" />
+  		<td class="full-width mWidth">
+        <img src="{$siteURL}{$feature-image}" alt="{$feature-alt}" width="640" height="325" class="mFullImage">
   		</td>
   	</tr>
   </xsl:template>
