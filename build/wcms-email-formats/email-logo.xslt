@@ -6,6 +6,8 @@
     <xsl:template match="/system-index-block">
         <xsl:apply-templates select="calling-page/system-page"/>
     </xsl:template>
+
+    <!-- LOGO WITH TRACKING CODE -->
     <xsl:template match="system-page">
         <td align="left" class="logo mWidth align-left">
             <a href="{$ucscURL}">
