@@ -14,32 +14,6 @@
 
         <!-- ADDITIONAL CONTENT -->
         <xsl:for-each select="system-data-structure/additional-content">
-          <!-- VARIABLE IMAGE LINK -->
-          <xsl:variable name="image-optional-url">
-            <xsl:choose>
-              <xsl:when test="section-content/other-link/link != '' or section-content/other-external-url != ''">
-                <a href="{section-content/other-link/link}{section-content/other-external-url}{$trackingURL}"><img align="left" alt="{section-content/image-alt}" border="0" class="mFullImage" height="185" src="{section-content/image/path}" width="250"/></a>
-              </xsl:when>
-              <xsl:otherwise>
-                <img align="left" alt="{section-content/image-alt}" border="0" class="mFullImage" height="185" src="{section-content/image/path}" width="250"/>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:variable>
-          <!-- END VARIABLE IMAGE LINK -->
-
-          <!-- VARIABLE HEADLINE LINK -->
-          <xsl:variable name="headline-optional-url">
-            <xsl:choose>
-              <xsl:when test="section-content/other-link/link != '' or section-content/other-external-url != ''">
-                <h3><a href="{section-content/other-link/link}{section-content/other-external-url}{$trackingURL}"><xsl:value-of select="section-content/headline"/></a></h3>
-              </xsl:when>
-              <xsl:otherwise>
-                <h3><xsl:value-of select="section-content/headline"/></h3>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:variable>
-          <!-- END VARIABLE HEADLINE LINK -->
-
           <xsl:if test="title != ''">
             <tr>
               <td align="left" class="mWidth section-title align-left">
@@ -49,6 +23,33 @@
           </xsl:if>
 
           <xsl:for-each select="section-content">
+            <!-- VARIABLE IMAGE LINK -->
+              <xsl:variable name="image-optional-url">
+                <xsl:choose>
+                  <xsl:when test="other-link/link != '' or other-external-url != ''">
+                    <a href="{other-link/link}{other-external-url}{$trackingURL}"><img align="left" alt="{image-alt}" border="0" class="mFullImage" height="185" src="{image/path}" width="250"/></a>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <img align="left" alt="{image-alt}" border="0" class="mFullImage" height="185" src="{image/path}" width="250"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:variable>
+              <!-- END VARIABLE IMAGE LINK -->
+
+              <!-- VARIABLE HEADLINE LINK -->
+              <xsl:variable name="headline-optional-url">
+                <xsl:choose>
+                  <xsl:when test="other-link/link != '' or other-external-url != ''">
+                    <h3><a href="{other-link/link}{other-external-url}{$trackingURL}"><xsl:value-of select="headline"/></a></h3>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <h3><xsl:value-of select="headline"/></h3>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:variable>
+            <!-- END VARIABLE HEADLINE LINK -->
+
+
             <xsl:choose>
               <xsl:when test="image/link != ''">
                 <tr>
