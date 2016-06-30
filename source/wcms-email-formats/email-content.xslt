@@ -23,6 +23,7 @@
           </xsl:if>
 
           <xsl:for-each select="section-content">
+            
             <!-- VARIABLE IMAGE LINK -->
               <xsl:variable name="image-optional-url">
                 <xsl:choose>
@@ -96,8 +97,13 @@
                   </td>
                 </tr>
               </xsl:otherwise>
+
             </xsl:choose>
+
           </xsl:for-each>
+
         </xsl:for-each>
+
     </xsl:template>
+    
 </xsl:stylesheet>
