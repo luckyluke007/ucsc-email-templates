@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-	<xsl:output indent="yes" method="xml"/>
-	<xsl:include href="/_internal/blocks/email/formating/email-variables"/>
-	<xsl:template match="/system-index-block">
-	  <xsl:apply-templates select="calling-page/system-page"/>
-	</xsl:template>
-		
-	<xsl:template match="system-page">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:output indent="yes" method="xml"/>
+  <xsl:include href="/_internal/email/formats/email-variables"/>
+  <xsl:template match="/system-index-block">
+    <xsl:apply-templates select="calling-page/system-page"/>
+  </xsl:template>
+    
+  <xsl:template match="system-page">
     <xsl:if test="system-data-structure/feature/image/path != '/'">
-      <xsl:apply-templates select="system-data-structure/feature"/>
+        <xsl:apply-templates select="system-data-structure/feature"/>
     </xsl:if>
   </xsl:template>
-  
+
   <xsl:template match="feature">
-    <!-- FEATURE IMAGE -->
-		<xsl:variable name="feature-image">
+    
+    <!-- BILLBOARD IMAGE  VARIABLE -->
+    <xsl:variable name="feature-image">
       <xsl:choose>
         <xsl:when test="image/path !='/'">
             <xsl:value-of select="image/path"/>
         </xsl:when>
       </xsl:choose>
     </xsl:variable>
-    <!-- FEATURE IMAGE ALTERNATIVE TEXT -->
+    <!-- END BILLBOARD IMAGE  VARIABLE -->
+    
+    <!-- BILLBOARD IMAGE ALT -->
     <xsl:variable name="feature-alt">
       <xsl:choose>
         <xsl:when test="image-alt !=''">
@@ -29,12 +32,53 @@
         </xsl:when>
       </xsl:choose>
     </xsl:variable>
+    <!-- END BILLBOARD IMAGE ALT -->
     
-    <!-- FEATURE IMAGE & ALTERNATIVE TEXT HTML CODE -->
-  	<tr>
-  		<td class="full-width mWidth">
-        <img src="{$siteURL}{$feature-image}" alt="{$feature-alt}" width="640" height="325" class="mFullImage">
-  		</td>
-  	</tr>
+    <!-- BILLBOARD A HREF -->
+    <xsl:variable name="banner-link">
+      <xsl:choose>
+        <xsl:when test="url != '' or asset-link/link !='' ">
+          <a href="{url}{asset-link/link}{$trackingURL}">
+            <img alt="{$feature-alt}" class="mFullImage" src="{$feature-image}" width="640"/>
+          </a>
+        </xsl:when>
+        <xsl:otherwise>
+          <img alt="{$feature-alt}" class="mFullImage" src="{$feature-image}" width="640"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <!-- END BILLBOARD A HREF -->
+    
+    <!-- BILLBOARD HTML -->
+    <tr>
+      <td class="full-width mWidth">
+        <xsl:copy-of select="$banner-link"/>
+      </td>
+    </tr>
+    <!-- END BILLBOARD HTML -->
+
+    <!-- NEWSLETTER FEATURE HEADLINE AND TEASER -->
+    <xsl:if test="asset-link/teaser != ''">
+      <tr>
+        <td align="left" class="mWidth content align-left">
+          <!-- HEADLINE -->
+            <a href="{url}{asset-link/link}{$trackingURL}">
+              <h2><xsl:value-of select="asset-link/title"/></h2>
+            </a>
+          <!-- END HEADLINE -->
+          <!-- TEASER-->
+            <xsl:if test="teaser != ''">
+              <p>
+                <xsl:copy-of select="node()"/>
+              </p>
+            </xsl:if>
+          <!-- END TEASER-->
+        </td>
+      </tr> 
+    </xsl:if>      
+    <!-- END NEWSLETTER FEATURE HEADLINE AND TEASER-->
+    
+      
   </xsl:template>
+
 </xsl:stylesheet>

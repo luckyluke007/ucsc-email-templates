@@ -4,8 +4,6 @@
 	<xsl:template match="/system-index-block">
 	  <xsl:apply-templates select="calling-page/system-page"/>
 	</xsl:template>
-
-	<!-- TITLE OF THE EMAIL -->
   <xsl:template match="system-page">
 		<xsl:if test="title != ''">
 			<td align="left" class="mWidth title align-left">

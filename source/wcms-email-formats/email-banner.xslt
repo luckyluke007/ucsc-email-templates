@@ -39,11 +39,11 @@
       <xsl:choose>
         <xsl:when test="url != '' or asset-link/link !='' ">
           <a href="{url}{asset-link/link}{$trackingURL}">
-            <img alt="{$feature-alt}" class="mFullImage" height="325" src="{$siteURL}{$feature-image}" width="640"/>
+            <img alt="{$feature-alt}" class="mFullImage" src="{$feature-image}" width="640"/>
           </a>
         </xsl:when>
         <xsl:otherwise>
-          <img alt="{$feature-alt}" class="mFullImage" height="325" src="{$siteURL}{$feature-image}" width="640"/>
+          <img alt="{$feature-alt}" class="mFullImage" src="{$feature-image}" width="640"/>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
@@ -58,26 +58,24 @@
     <!-- END BILLBOARD HTML -->
 
     <!-- NEWSLETTER FEATURE HEADLINE AND TEASER -->
+    <xsl:if test="asset-link/teaser != ''">
       <tr>
         <td align="left" class="mWidth content align-left">
           <!-- HEADLINE -->
-          <xsl:if test="asset-link/title != ''">
             <a href="{url}{asset-link/link}{$trackingURL}">
               <h2><xsl:value-of select="asset-link/title"/></h2>
             </a>
-          </xsl:if>
           <!-- END HEADLINE -->
           <!-- TEASER-->
-          <xsl:for-each select="teaser">
-            <xsl:if test=". != ''">
+            <xsl:if test="teaser != ''">
               <p>
                 <xsl:copy-of select="node()"/>
               </p>
             </xsl:if>
-          </xsl:for-each>
           <!-- END TEASER-->
         </td>
-      </tr>       
+      </tr> 
+    </xsl:if>      
     <!-- END NEWSLETTER FEATURE HEADLINE AND TEASER-->
     
       
