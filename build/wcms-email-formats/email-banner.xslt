@@ -47,6 +47,10 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
+
+    <xsl:variable name="">
+      
+    </xsl:variable>
     <!-- END BILLBOARD A HREF -->
     
     <!-- BILLBOARD HTML -->
@@ -58,20 +62,21 @@
     <!-- END BILLBOARD HTML -->
 
     <!-- NEWSLETTER FEATURE HEADLINE AND TEASER -->
-    <xsl:if test="asset-link/teaser != ''">
+
+    <xsl:if test="teaser != ''">
       <tr>
         <td align="left" class="mWidth content align-left">
           <!-- HEADLINE -->
             <a href="{url}{asset-link/link}{$trackingURL}">
-              <h2><xsl:value-of select="asset-link/title"/></h2>
+              <h2><xsl:value-of select="headline"/></h2>
             </a>
           <!-- END HEADLINE -->
           <!-- TEASER-->
-            <xsl:if test="teaser != ''">
-              <p>
-                <xsl:copy-of select="node()"/>
-              </p>
-            </xsl:if>
+            <xsl:for-each select="teaser">
+              <xsl:if test=". != ''">
+                <p><xsl:copy-of select="node()"/></p>
+              </xsl:if>
+            </xsl:for-each>
           <!-- END TEASER-->
         </td>
       </tr> 
