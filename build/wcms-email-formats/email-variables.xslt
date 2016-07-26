@@ -5,6 +5,8 @@
     <xsl:template match="/system-index-block">
         <xsl:apply-templates select="calling-page/system-page"/>
     </xsl:template>
+
+   
     <!-- UCSC URL -->
     <xsl:variable name="ucscURL">
         <xsl:text>http://www.ucsc.edu</xsl:text>
@@ -26,6 +28,58 @@
       <xsl:text>&amp;utm_medium=email&amp;utm_campaign=</xsl:text>
       <xsl:value-of select="/system-index-block/calling-page/system-page/site"/>
       <xsl:value-of select="/system-index-block/calling-page/system-page/last-modified-by"/>
+    </xsl:variable>
+
+    <!-- MSO TDs TWO COLUMNS -->
+    <xsl:variable name="outlook-split-two">
+      <xsl:comment>
+        <![CDATA[[if (gte mso 9)|(IE)]>
+            </td>
+            <td width="340" valign="top">
+        <![endif]]]>
+      </xsl:comment>
+    </xsl:variable>
+
+    <!-- MSO TDs TWO COLUMNS -->
+    <xsl:variable name="outlook-split-feature">
+      <xsl:comment>
+        <![CDATA[[if (gte mso 9)|(IE)]>
+            </td>
+            <td width="295" valign="top">
+        <![endif]]]>
+      </xsl:comment>
+    </xsl:variable>
+
+    <!-- MSO THREE COLUMNS OPEN TABLE -->
+    <xsl:variable name="outlook-open-table">
+      <xsl:comment>
+        <![CDATA[[if (gte mso 9)|(IE)]>
+            <table width="610" align="center">
+              <tr>
+                <td width="192" valign="top">
+        <![endif]]]>
+      </xsl:comment>
+    </xsl:variable>
+
+    <!-- MSO THREE COLUMNS TDs -->
+    <xsl:variable name="outlook-split-three">
+      <xsl:comment>
+        <![CDATA[[if (gte mso 9)|(IE)]>
+            </td>
+            <td width="192" valign="top">
+        <![endif]]]>
+      </xsl:comment>
+    </xsl:variable>
+
+    <!-- MSO CLOSE TABLE -->
+    <xsl:variable name="outlook-close-table">
+      <xsl:comment>
+        <![CDATA[[if (gte mso 9)|(IE)]>
+              </td>
+            </tr>
+          </table>
+        <![endif]]]>
+      </xsl:comment>
     </xsl:variable>
 
 </xsl:stylesheet>
