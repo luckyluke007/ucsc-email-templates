@@ -64,6 +64,7 @@
         </xsl:choose>
         </xsl:variable>
         <!-- End variable image link (two columns photo/text) --> 
+
         <!-- Variable headline link -->
         <xsl:variable name="headline-optional-url">
         <xsl:choose>
@@ -132,6 +133,58 @@
       <xsl:variable name="item-count"> 
         <xsl:value-of select="count(item)"/> 
       </xsl:variable>
+
+      <!-- Variable image link (two columns photo/text) -->
+      <xsl:variable name="image-optional-url">
+        <xsl:choose>
+          <xsl:when test="item/asset-link/link != '' or item/url != ''">
+            <a href="{item/asset-link/link}{item/url}{$trackingURL}"> <img align="left" alt="{item/image-alt}" border="0" class="mFullImage" src="{item/image/path}" width="295"/> </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <img align="left" alt="{item/image-alt}" border="0" class="mFullImage" src="{item/image/path}" width="295"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <!-- End variable image link (two columns photo/text) -->
+
+      <!-- Variable image link (two columns photo/text) -->
+      <xsl:variable name="image-left-url">
+        <xsl:choose>
+          <xsl:when test="item/asset-link/link != '' or item/url != ''">
+            <a href="{item/asset-link/link}{item/url}{$trackingURL}"> <img align="left" alt="{item/image-alt}" border="0" class="mFullImage" src="{item/image/path}" width="250"/> </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <img align="left" alt="{item/image-alt}" border="0" class="mFullImage" src="{item/image/path}" width="250"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <!-- End variable image link (two columns photo/text) -->
+
+
+      <!-- Variable image link (two columns photo/text) -->
+      <xsl:variable name="three-image-optional-url">
+        <xsl:choose>
+          <xsl:when test="item/asset-link/link != '' or item/url != ''">
+            <a href="{item/asset-link/link}{item/url}{$trackingURL}"> <img align="left" alt="{item/image-alt}" border="0" class="mFullImage" src="{item/image/path}" width="190"/> </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <img align="left" alt="{item/image-alt}" border="0" class="mFullImage" src="{item/image/path}" width="190"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <!-- End variable image link (two columns photo/text) --> 
+      <!-- Variable headline link -->
+      <xsl:variable name="headline-optional-url">
+        <xsl:choose>
+          <xsl:when test="item/asset-link/link != '' or item/url != ''">
+            <h3><a href="{item/asset-link/link}{item/url}{$trackingURL}"> <xsl:value-of select="item/headline"/> </a> </h3>
+          </xsl:when>
+          <xsl:otherwise>
+            <h3> <xsl:value-of select="item/headline"/> </h3>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <!-- End variable headline link -->
        
       <!-- Additional section title -->
       <xsl:if test="title != ''">
@@ -144,95 +197,61 @@
         <td class="mWidth section-content">
           <xsl:if test="item-layout = 'Column'">
             <xsl:for-each select="item">
-              <!-- Variable image link (two columns photo/text) -->
-              <xsl:variable name="image-optional-url">
-                <xsl:choose>
-                  <xsl:when test="asset-link/link != '' or item/url != ''">
-                    <a href="{item/asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="295"/> </a>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="295"/>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </xsl:variable>
-              <!-- End variable image link (two columns photo/text) --> 
-              <!-- Variable image link (two columns photo/text) -->
-              <xsl:variable name="three-image-optional-url">
-                <xsl:choose>
-                  <xsl:when test="asset-link/link != '' or url != ''">
-                    <a href="{asset-link/link}{item/url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="190"/> </a>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="190"/>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </xsl:variable>
-              <!-- End variable image link (two columns photo/text) --> 
-              <!-- Variable headline link -->
-              <xsl:variable name="headline-optional-url">
-                <xsl:choose>
-                  <xsl:when test="asset-link/link != '' or url != ''">
-                    <h3><a href="{asset-link/link}{url}{$trackingURL}"> <xsl:value-of select="headline"/> </a> </h3>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <h3> <xsl:value-of select="headline"/> </h3>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </xsl:variable>
-              <!-- End variable headline link -->
-
 
               <xsl:choose>
                 <!-- 2 columns -->
                 <xsl:when test="$item-count = 2">
-                  <!-- Not last item -->
-                  <xsl:if test="position() != last()">
-                    <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="{headline}" width="295">
-                      <tbody>
-                        <tr>
-                          <td class="mWidth"><xsl:copy-of select="$image-optional-url"/></td>
-                        </tr>
-                        <tr>
-                          <td align="left" class="mWidth align-left"><xsl:copy-of select="$headline-optional-url"/>
-                            <p>
-                              <xsl:for-each select="teaser">
-                                <xsl:if test=". !='' ">
-                                  <xsl:copy-of select="node()"/>
-                                </xsl:if>
-                              </xsl:for-each>
-                            </p></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <!-- variable in variable includes -->
-                    <xsl:copy-of select="$outlook-split-feature"/>
-                  </xsl:if>
-                  <!-- end not last item --> 
-                  <!-- last item -->
-                  <xsl:if test="position() = last()">
-                    <table align="right" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="{headline}" width="295">
-                      <tbody>
-                        <tr>
-                          <td class="mWidth"><xsl:copy-of select="$image-optional-url"/></td>
-                        </tr>
-                        <tr>
-                          <td align="left" class="mWidth align-left"><xsl:copy-of select="$headline-optional-url"/>
-                            <p>
-                              <xsl:for-each select="teaser">
-                                <xsl:if test=". !='' ">
-                                  <xsl:copy-of select="node()"/>
-                                </xsl:if>
-                              </xsl:for-each>
-                            </p></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </xsl:if>
-                  <!-- end last item -->
+                  <xsl:for-each select=".">
+                    <!-- Not last item -->
+                    <xsl:if test="position() != last()">
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="{headline}" width="295">
+                        <tbody>
+                          <tr>
+                            <td class="mWidth"><xsl:copy-of select="$image-optional-url"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left" class="mWidth align-left"><xsl:copy-of select="$headline-optional-url"/>
+                              <p>
+                                <xsl:for-each select="teaser">
+                                  <xsl:if test=". !='' ">
+                                    <xsl:copy-of select="node()"/>
+                                  </xsl:if>
+                                </xsl:for-each>
+                              </p></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- variable in variable includes -->
+                      <xsl:copy-of select="$outlook-split-feature"/>
+                    </xsl:if>
+                    <!-- end not last item --> 
+                    <!-- last item -->
+                    <xsl:if test="position() = last()">
+                      <table align="right" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="{headline}" width="295">
+                        <tbody>
+                          <tr>
+                            <td class="mWidth"><xsl:copy-of select="$image-optional-url"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left" class="mWidth align-left"><xsl:copy-of select="$headline-optional-url"/>
+                              <p>
+                                <xsl:for-each select="teaser">
+                                  <xsl:if test=". !='' ">
+                                    <xsl:copy-of select="node()"/>
+                                  </xsl:if>
+                                </xsl:for-each>
+                              </p></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </xsl:if>
+                    <!-- end last item -->
+                  </xsl:for-each>
                 </xsl:when>
                 <!-- end 2 columns -->
                 <xsl:when test="$item-count = 3">
                     <!-- Not last item -->
+                  <xsl:for-each select=".">
                     <xsl:if test="position() != last()">
                       <!-- variable in variable includes -->
                       <xsl:copy-of select="$outlook-open-table"/>
@@ -276,6 +295,7 @@
                       <xsl:copy-of select="$outlook-close-table"/>
                     </xsl:if>
                   <!-- End last 3 columns item -->
+                  </xsl>
                 </xsl:when>
 
                 <!-- single column -->
@@ -295,6 +315,60 @@
             </xsl:for-each>
           </xsl:if>
           <!-- end item column layout-->
+
+          <xsl:if test="item-layout = 'Row'">
+            <xsl:for-each select="item">
+              <xsl:choose>
+                <xsl:when test="image/link != ''">
+                  <tr>
+                    <td class="mWidth section-content"><!-- Left image column -->
+                      
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
+                        <tr>
+                          <td class="mWidth">
+                            <!-- IMG URL VARIABLE HERE -->
+                            <xsl:copy-of select="$image-left-url"/></td>
+                        </tr>
+                      </table>
+                      
+                      <!-- End left image column --> 
+                      <!-- variable in variable includes -->
+                      
+                      <xsl:copy-of select="$outlook-split-two"/>
+                      
+                      <!-- Right text column with headline -->
+                      
+                      <table align="right" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="340">
+                        <tr>
+                          <td class="mWidth spacing-top align-left">
+                            <xsl:copy-of select="$headline-optional-url"/>
+                            <xsl:for-each select="teaser">
+                              <xsl:if test=". !='' ">
+                                <xsl:copy-of select="node()"/>
+                              </xsl:if>
+                            </xsl:for-each></td>
+                        </tr>
+                      </table>
+                      
+                      <!-- End right text column with headline --></td>
+                  </tr>
+                </xsl:when>
+                <xsl:otherwise>
+                  <!-- No image full column text -->
+                  <tr>
+                    <td class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right">
+                      <xsl:copy-of select="$headline-optional-url"/>
+                      <xsl:for-each select="teaser">
+                        <xsl:if test=". !='' ">
+                          <xsl:copy-of select="node()"/>
+                        </xsl:if>
+                      </xsl:for-each></td>
+                  </tr>
+                  <!-- End no image full column text -->
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:for-each>
+          </xsl:if>
         </td>
       </tr>
     </xsl:for-each>
