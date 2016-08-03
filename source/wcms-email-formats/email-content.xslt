@@ -158,6 +158,20 @@
               <!-- End variable image link (two columns photo/text) --> 
 
               <!-- Variable image link (two columns photo/text) -->
+              <xsl:variable name="image-left-url">
+                <xsl:choose>
+                  <xsl:when test="asset-link/link != '' or item/url != ''">
+                    <a href="{asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="250"/> </a>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="250"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:variable>
+              <!-- End variable image link (two columns photo/text) -->
+
+
+              <!-- Variable image link (two columns photo/text) -->
               <xsl:variable name="three-image-optional-url">
                 <xsl:choose>
                   <xsl:when test="asset-link/link != '' or url != ''">
@@ -303,7 +317,8 @@
           <xsl:if test="item-layout = 'Row'">
             <xsl:for-each select="item">
 
-              <!-- Variable image link (two columns photo/text) -->
+
+               <!-- Variable image link (two columns photo/text) -->
               <xsl:variable name="image-left-url">
                 <xsl:choose>
                   <xsl:when test="asset-link/link != '' or item/url != ''">
@@ -315,6 +330,19 @@
                 </xsl:choose>
               </xsl:variable>
               <!-- End variable image link (two columns photo/text) -->
+
+              <!-- Variable headline link -->
+              <xsl:variable name="headline-optional-url">
+                <xsl:choose>
+                  <xsl:when test="asset-link/link != '' or url != ''">
+                    <h3><a href="{asset-link/link}{url}{$trackingURL}"> <xsl:value-of select="headline"/> </a> </h3>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <h3> <xsl:value-of select="headline"/> </h3>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:variable>
+              <!-- End variable headline link -->
 
               <xsl:choose>
                 <xsl:when test="image/link != ''">
