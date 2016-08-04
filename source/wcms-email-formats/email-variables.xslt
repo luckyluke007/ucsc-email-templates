@@ -18,7 +18,8 @@
     <!-- PAGE URL -->
     <xsl:variable name="pageURL">
       <xsl:value-of select="$siteURL"/>
-      <xsl:value-of select="/system-index-block/system-page/link"/>.html
+      <xsl:value-of select="/system-index-block/calling-page/system-page/path"/>
+      <xsl:text>.html</xsl:text>
     </xsl:variable>
     
     <!-- TRACKING URL -->
