@@ -6,9 +6,7 @@
 
   <xsl:template match="system-page">
     <!-- FOOTER CODE -->
-      <xsl:if test="system-data-structure/footer/path != ''">
-        <xsl:apply-templates mode="homepage-block" select="system-data-structure/footer/path"/>
-      </xsl:if>
+      <xsl:copy-of select="system-data-structure/footer/content"/>
     <!-- END FOOTER CODE -->
   </xsl:template>
 
