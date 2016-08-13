@@ -249,10 +249,12 @@
                 </xsl:when>
                 <!-- end 2 columns -->
                 <xsl:when test="$item-count = 3">
+                    <xsl:if test="position() = 1">
+                      <xsl:copy-of select="$outlook-open-table"/>
+                    </xsl:if>
                     <!-- Not last item -->
                     <xsl:if test="position() != last()">
                       <!-- variable in variable includes -->
-                      <xsl:copy-of select="$outlook-open-table"/>
                       <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="{headline}" width="190">
                         <tr>
                           <td class="mWidth xlarge-spacing-right"><xsl:copy-of select="$three-image-optional-url"/></td>
