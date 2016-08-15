@@ -7,7 +7,7 @@
   </xsl:template>
     
   <xsl:template match="system-page">
-    <xsl:if test="system-data-structure/feature/image/path != '/'">
+    <xsl:if test="system-data-structure/feature != '/'">
         <xsl:apply-templates select="system-data-structure/feature"/>
     </xsl:if>
   </xsl:template>
@@ -47,18 +47,16 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-
-    <xsl:variable name="">
-      
-    </xsl:variable>
     <!-- END BILLBOARD A HREF -->
     
     <!-- BILLBOARD HTML -->
-    <tr>
-      <td class="full-width mWidth">
-        <xsl:copy-of select="$banner-link"/>
-      </td>
-    </tr>
+    <xsl:if test="image/path != '/'">
+      <tr>
+        <td class="full-width mWidth">
+          <xsl:copy-of select="$banner-link"/>
+        </td>
+      </tr>
+    </xsl:if>
     <!-- END BILLBOARD HTML -->
 
     <!-- NEWSLETTER FEATURE HEADLINE AND TEASER -->
@@ -82,7 +80,6 @@
       </tr> 
     </xsl:if>      
     <!-- END NEWSLETTER FEATURE HEADLINE AND TEASER-->
-    
       
   </xsl:template>
 
