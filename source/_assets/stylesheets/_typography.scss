@@ -43,10 +43,13 @@ p {
 	font-size: 16px;;
 }
 
+.uppercase {
+	text-transform: uppercase;
+}
+
 .title {
-	background: $brand-blue;
-	color: $brand-gold;
-	padding: 10px 15px;
+	color: $black;
+	padding: 0 15px 10px;
 	width: 640px;
 }
 

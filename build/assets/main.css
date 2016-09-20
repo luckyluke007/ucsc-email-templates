@@ -37,10 +37,12 @@ h4 {
 p {
   font-size: 16px; }
 
+.uppercase {
+  text-transform: uppercase; }
+
 .title {
-  background: #00458c;
-  color: #ffc500;
-  padding: 10px 15px;
+  color: #000;
+  padding: 0 15px 10px;
   width: 640px; }
 
 .section-title {
@@ -84,8 +86,7 @@ html {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   line-height: 20px;
   margin: 10px auto;
-  padding: 0;
-  text-align: center; }
+  padding: 0; }
 
 table, td {
   border-collapse: collapse !important;
@@ -109,6 +110,10 @@ img {
 .logo {
   padding: 15px; }
 
+.logo-blue {
+  background: #00458c;
+  padding: 15px; }
+
 a,
 a:active {
   color: #00458c;
@@ -120,6 +125,10 @@ a:hover {
 .spacing-top {
   padding-bottom: 5px;
   padding-top: 10px; }
+
+.large-spacing-top {
+  padding-bottom: 5px;
+  padding-top: 20px; }
 
 .spacing-top-bottom {
   padding-top: 5px;
@@ -140,14 +149,29 @@ a:hover {
 .large-spacing-right {
   padding-right: 15px; }
 
+.xlarge-spacing-right {
+  padding-right: 20px; }
+
 .large-spacing-left {
   padding-left: 15px; }
+
+.xlarge-spacing-left {
+  padding-left: 20px; }
 
 .float-left {
   float: left; }
 
 .float-right {
   float: right; }
+
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
 
 .main {
   background: #f2f5f8;
@@ -218,6 +242,3 @@ a:hover {
 
 .end-border {
   border-bottom: 3px #00458c solid; }
-
-.border-columns-fixed {
-  border: 1px solid #005c9f; }
