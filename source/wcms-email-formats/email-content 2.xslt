@@ -37,7 +37,7 @@
     <!-- FEATURE TEASER TEXT/ADMIN TEXT/FEATURE EVENT TEXT -->
     <xsl:for-each select="system-data-structure/feature/content">
       <xsl:if test=". != ''">
-        <td align="left" class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right"><xsl:copy-of select="$administrative-image"/>
+        <td align="left" class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right" width="610"><xsl:copy-of select="$administrative-image"/>
           <xsl:copy-of select="node()"/></td>
       </xsl:if>
     </xsl:for-each>
