@@ -148,7 +148,7 @@
               <xsl:variable name="image-optional-url">
                 <xsl:choose>
                   <xsl:when test="asset-link/link != '' or item/url != ''">
-                    <a href="{item/asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="295"/> </a>
+                    <a href="{asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="295"/> </a>
                   </xsl:when>
                   <xsl:otherwise>
                     <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="295"/>
