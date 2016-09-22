@@ -65,9 +65,13 @@
       <tr>
         <td align="left" class="mWidth content align-left">
           <!-- HEADLINE -->
-            <a href="{url}{asset-link/link}{$trackingURL}">
-              <h2><xsl:value-of select="headline"/></h2>
-            </a>
+          <xsl:for-each select="headline">
+            <xsl:if test=". != ''">
+              <a href="{url}{asset-link/link}{$trackingURL}">
+                <h2><xsl:copy-of select="node()"/></h2>
+              </a>
+            </xsl:if>
+          </xsl:for-each>
           <!-- END HEADLINE -->
           <!-- TEASER-->
             <xsl:for-each select="teaser">
