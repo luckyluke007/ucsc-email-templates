@@ -266,7 +266,7 @@
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth xlarge-spacing-right align-left"><xsl:copy-of select="$headline-optional-url"/>
+                          <td align="left" class="mWidth xlarge-spacing-right align-left spacing-top-bottom"><xsl:copy-of select="$headline-optional-url"/>
                             <p>
                               <xsl:for-each select="teaser">
                                 <xsl:if test=". !='' ">
@@ -289,7 +289,7 @@
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth align-left">
+                          <td align="left" class="mWidth align-left spacing-top-bottom">
                             <xsl:copy-of select="$headline-optional-url"/>
                             <p>
                               <xsl:for-each select="teaser">
