@@ -16,28 +16,31 @@
     <!-- End admin image caption text -->
     <xsl:variable name="administrative-image">
     <xsl:for-each select="system-data-structure">
-      <xsl:choose>
-        <xsl:when test="image != ''">
-          <table align="right" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="{image-alt}" width="295">
-            <tbody>
-              <tr>
-                <td class="mWidth spacing-left large-spacing-top"><img alt="{image-alt}" class="mFullImage" src="{image/path}" width="295"/></td>
-              <tr>
-                <td class="mWidth spacing-left"><xsl:value-of select="$caption"/></td>
-              </tr>
+      <xsl:if test="image/name != ''">
+        <xsl:choose>
+          <xsl:when test="image != ''">
+            <table align="right" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="{image-alt}" width="295">
+              <tbody>
+                <tr>
+                  <td class="mWidth spacing-left large-spacing-top"><img alt="{image-alt}" class="mFullImage" src="{image/path}" width="295"/></td>
+                <tr>
+                  <td class="mWidth spacing-left"><xsl:value-of select="$caption"/></td>
                 </tr>
-              
-            </tbody>
-          </table>
-        </xsl:when>
-      </xsl:choose>
+                  </tr>
+                
+              </tbody>
+            </table>
+          </xsl:when>
+        </xsl:choose>
+      </xsl:if>
     </xsl:for-each>
     </xsl:variable>
     <!-- END IMAGE FOR ADMINISTRATIVE LETTER --> 
     <!-- FEATURE TEASER TEXT/ADMIN TEXT/FEATURE EVENT TEXT -->
     <xsl:for-each select="system-data-structure/feature/content">
       <xsl:if test=". != ''">
-        <td align="left" class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right" width="610"><xsl:copy-of select="$administrative-image"/>
+        <td align="left" class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right" width="610">
+          <xsl:copy-of select="$administrative-image"/>
           <xsl:copy-of select="node()"/></td>
       </xsl:if>
     </xsl:for-each>
@@ -133,45 +136,34 @@
       </xsl:variable>
        
       <!-- Newsletter section title -->
-      <xsl:if test="title != ''">
-        <tr>
-          <td align="left" class="mWidth section-title align-left"><h2> <xsl:value-of select="title"/> </h2></td>
-        </tr>
-      </xsl:if>
+      <xsl:for-each select="title">
+        <xsl:if test=". != ''">
+          <tr>
+            <td align="left" class="mWidth section-title align-left"><h2><xsl:copy-of select="node()"/> </h2></td>
+          </tr>
+        </xsl:if>
+      </xsl:for-each>
       <!-- Newsletter section title -->
       <tr>
         <td class="mWidth section-content">
           <xsl:if test="item-layout = 'Column'">
             <xsl:for-each select="item">
               
-              <!-- Variable image link (two columns photo/text) -->
+              <!-- Variable image link (two columns stories side by side) -->
               <xsl:variable name="image-optional-url">
                 <xsl:choose>
-                  <xsl:when test="asset-link/link != '' or item/url != ''">
-                    <a href="{item/asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="295"/> </a>
+                  <xsl:when test="asset-link/link != '' or url != ''">
+                    <a href="{asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="295"/> </a>
                   </xsl:when>
                   <xsl:otherwise>
                     <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="295"/>
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:variable>
-              <!-- End variable image link (two columns photo/text) --> 
-
-              <!-- Variable image link (two columns photo/text) -->
-              <xsl:variable name="image-left-url">
-                <xsl:choose>
-                  <xsl:when test="asset-link/link != '' or item/url != ''">
-                    <a href="{asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="250"/> </a>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="250"/>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </xsl:variable>
-              <!-- End variable image link (two columns photo/text) -->
+              <!-- End variable image link (two columns stories side by side) --> 
 
 
-              <!-- Variable image link (two columns photo/text) -->
+              <!-- Variable image link (three columns photo/text) -->
               <xsl:variable name="three-image-optional-url">
                 <xsl:choose>
                   <xsl:when test="asset-link/link != '' or url != ''">
@@ -182,7 +174,33 @@
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:variable>
-              <!-- End variable image link (two columns photo/text) --> 
+              <!-- End variable image link (three columns photo/text) -->
+
+              <!-- single image variable -->
+              <xsl:variable name="single-image-url">
+                <xsl:choose>
+                  <xsl:when test="asset-link/link != '' or url != ''">
+                    <a href="{asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="610"/></a>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="610"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:variable>
+              <!-- end single image variable -->
+
+              <!-- Variable image link (two columns photo align left/text align right) -->
+              <xsl:variable name="image-left-url">
+                <xsl:choose>
+                  <xsl:when test="asset-link/link != '' or url != ''">
+                    <a href="{asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="250"/> </a>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="250"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:variable>
+              <!-- End variable image link (two columns photo align left/text align right) -->
 
 
               <!-- Variable headline link -->
@@ -266,7 +284,7 @@
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth xlarge-spacing-right align-left"><xsl:copy-of select="$headline-optional-url"/>
+                          <td align="left" class="mWidth xlarge-spacing-right align-left spacing-top-bottom"><xsl:copy-of select="$headline-optional-url"/>
                             <p>
                               <xsl:for-each select="teaser">
                                 <xsl:if test=". !='' ">
@@ -289,8 +307,10 @@
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth align-left">
-                            <xsl:copy-of select="$headline-optional-url"/>
+                          <td align="left" class="mWidth align-left spacing-top-bottom">
+                            <xsl:if test="headline != ''">
+                              <xsl:copy-of select="$headline-optional-url"/>
+                            </xsl:if>
                             <p>
                               <xsl:for-each select="teaser">
                                 <xsl:if test=". !='' ">
@@ -309,9 +329,11 @@
                 <!-- single column -->
                 <xsl:otherwise>
                     <xsl:if test="image/name != ''">
-                      <img alt="{image-alt}" class="mFullImage" src="{image/path}" width="610"/>
+                      <xsl:copy-of select="$single-image-url"/>
                     </xsl:if>
-                    <xsl:copy-of select="$headline-optional-url"/>
+                    <xsl:if test="headline != ''">
+                      <xsl:copy-of select="$headline-optional-url"/>
+                    </xsl:if>
                     <p>
                       <xsl:for-each select="teaser">
                         <xsl:if test=". !='' ">
