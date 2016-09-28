@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output indent="yes" method="xml"/>
     <xsl:template match="/system-index-block">
         <xsl:apply-templates select="calling-page/system-page"/>
@@ -27,8 +26,7 @@
       <xsl:text>?utm_source=</xsl:text>
       <xsl:value-of select="/system-index-block/calling-page/system-page/name"/>
       <xsl:text>&amp;utm_medium=email&amp;utm_campaign=</xsl:text>
-      <xsl:value-of select="/system-index-block/calling-page/system-page/site"/>
-      <xsl:value-of select="/system-index-block/calling-page/system-page/last-modified-by"/>
+      <xsl:value-of select="/system-index-block/calling-page/system-page/system-data-structure/ga-campaign"/>
     </xsl:variable>
 
     <!-- MSO TDs TWO COLUMNS -->
