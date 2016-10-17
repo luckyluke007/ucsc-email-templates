@@ -47,6 +47,17 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
+
+    <xsl:variable name="headline-optional-url">
+      <xsl:choose>
+        <xsl:when test="asset-link/link != '' or url != ''">
+          <h3> <a href="{asset-link/link}{url}{$trackingURL}"> <xsl:value-of select="headline"/> </a> </h3>
+        </xsl:when>
+        <xsl:otherwise>
+          <h3> <xsl:value-of select="headline"/> </h3>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
     <!-- END BILLBOARD A HREF -->
     
     <!-- BILLBOARD HTML -->
@@ -67,9 +78,7 @@
           <!-- HEADLINE -->
           <xsl:for-each select="headline">
             <xsl:if test=". != ''">
-              <a href="{url}{asset-link/link}{$trackingURL}">
-                <h2><xsl:copy-of select="node()"/></h2>
-              </a>
+              <xsl:copy-of select="$headline-optional-url"/>
             </xsl:if>
           </xsl:for-each>
           <!-- END HEADLINE -->
