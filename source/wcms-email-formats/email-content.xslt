@@ -174,7 +174,7 @@
               <xsl:variable name="three-image-optional-url">
                 <xsl:choose>
                   <xsl:when test="asset-link/link != '' or url != ''">
-                    <a href="{asset-link/link}{item/url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="190"/> </a>
+                    <a href="{asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="190"/> </a>
                   </xsl:when>
                   <xsl:otherwise>
                     <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="190"/>
@@ -372,7 +372,7 @@
                <!-- Variable image link (two columns photo/text) -->
               <xsl:variable name="image-left-url">
                 <xsl:choose>
-                  <xsl:when test="asset-link/link != '' or item/url != ''">
+                  <xsl:when test="asset-link/link != '' or url != ''">
                     <a href="{asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="250"/> </a>
                   </xsl:when>
                   <xsl:otherwise>
