@@ -23,8 +23,7 @@
     
     <!-- TRACKING URL -->
     <xsl:variable name="trackingURL">
-      <xsl:text>?utm_source=</xsl:text>
-      <xsl:value-of select="/system-index-block/calling-page/system-page/name"/>
+      <xsl:text>?utm_source=emailbuilder</xsl:text>
       <xsl:text>&amp;utm_medium=email&amp;utm_campaign=</xsl:text>
       <xsl:value-of select="/system-index-block/calling-page/system-page/system-data-structure/ga-campaign"/>
     </xsl:variable>
