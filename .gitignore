@@ -9,4 +9,8 @@ Gruntfile.js
 
 *.tmp
 
+<<<<<<< HEAD
 npm-debug.log
+=======
+*.log
+>>>>>>> master
