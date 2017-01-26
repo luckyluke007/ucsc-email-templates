@@ -7,7 +7,7 @@
   </xsl:template>
     
   <xsl:template match="system-page">
-    <xsl:if test="system-data-structure/feature/image/path != '/'">
+    <xsl:if test="system-data-structure/feature != '/'">
         <xsl:apply-templates select="system-data-structure/feature"/>
     </xsl:if>
   </xsl:template>
@@ -48,17 +48,26 @@
       </xsl:choose>
     </xsl:variable>
 
-    <xsl:variable name="">
-      
+    <xsl:variable name="headline-optional-url">
+      <xsl:choose>
+        <xsl:when test="asset-link/link != '' or url != ''">
+          <h3> <a href="{asset-link/link}{url}{$trackingURL}"> <xsl:value-of select="headline"/> </a> </h3>
+        </xsl:when>
+        <xsl:otherwise>
+          <h3> <xsl:value-of select="headline"/> </h3>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:variable>
     <!-- END BILLBOARD A HREF -->
     
     <!-- BILLBOARD HTML -->
-    <tr>
-      <td class="full-width mWidth">
-        <xsl:copy-of select="$banner-link"/>
-      </td>
-    </tr>
+    <xsl:if test="image/path != '/'">
+      <tr>
+        <td class="full-width mWidth">
+          <xsl:copy-of select="$banner-link"/>
+        </td>
+      </tr>
+    </xsl:if>
     <!-- END BILLBOARD HTML -->
 
     <!-- NEWSLETTER FEATURE HEADLINE AND TEASER -->
@@ -67,9 +76,11 @@
       <tr>
         <td align="left" class="mWidth content align-left">
           <!-- HEADLINE -->
-            <a href="{url}{asset-link/link}{$trackingURL}">
-              <h2><xsl:value-of select="headline"/></h2>
-            </a>
+          <xsl:for-each select="headline">
+            <xsl:if test=". != ''">
+              <xsl:copy-of select="$headline-optional-url"/>
+            </xsl:if>
+          </xsl:for-each>
           <!-- END HEADLINE -->
           <!-- TEASER-->
             <xsl:for-each select="teaser">
@@ -82,7 +93,6 @@
       </tr> 
     </xsl:if>      
     <!-- END NEWSLETTER FEATURE HEADLINE AND TEASER-->
-    
       
   </xsl:template>
 
