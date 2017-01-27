@@ -13,17 +13,20 @@ h6 {
 	line-height: 1.25em;
 }
 
-h1 {
+h1,
+.ucsc-email-title {
 	font-size: $font-h1;
 	margin: 0;
 }
 
-h2 {
+h2,
+.ucsc-yellow-title {
 	font-size: $font-h2;
 	margin: 0;
 }
 
-h3 {
+h3,
+.ucsc-title {
 	font-size: $font-h3;
 }
 

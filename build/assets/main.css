@@ -14,15 +14,18 @@ h6 {
   font-weight: normal;
   line-height: 1.25em; }
 
-h1 {
+h1,
+.ucsc-email-title {
   font-size: 32px;
   margin: 0; }
 
-h2 {
+h2,
+.ucsc-yellow-title {
   font-size: 24px;
   margin: 0; }
 
-h3 {
+h3,
+.ucsc-title {
   font-size: 19px; }
 
 h4 {
