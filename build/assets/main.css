@@ -43,6 +43,10 @@ p {
 .uppercase {
   text-transform: uppercase; }
 
+.email-title {
+  color: #000;
+  padding: 0 15px 10px; }
+
 .title {
   color: #000;
   padding: 0 0 10px; }
@@ -186,8 +190,7 @@ a:hover {
   padding: 0; }
 
 .content {
-  padding: 10px 20px;
-  width: 600px; }
+  padding: 10px 15px; }
 
 .caption {
   padding: 5px 15px; }
@@ -196,8 +199,7 @@ a:hover {
   color: #333;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   padding-left: 15px;
-  padding-right: 15px;
-  width: 610px; }
+  padding-right: 15px; }
 
 .section-content h3,
 .section-content p {
