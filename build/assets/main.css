@@ -45,8 +45,7 @@ p {
 
 .title {
   color: #000;
-  padding: 0 15px 10px;
-  width: 640px; }
+  padding: 0 15px 10px; }
 
 .section-title {
   border-bottom: 2px solid #ffc500;
@@ -187,7 +186,8 @@ a:hover {
   padding: 0; }
 
 .content {
-  padding: 10px 15px; }
+  padding: 10px 20px;
+  width: 600px; }
 
 .caption {
   padding: 5px 15px; }
@@ -196,7 +196,8 @@ a:hover {
   color: #333;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  width: 610px; }
 
 .section-content h3,
 .section-content p {
