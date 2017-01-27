@@ -18,3 +18,9 @@ npm-debug.log
 *.json
 
 *.json
+
+build/assets/.sprockets-manifest-e61a66ab951ade4dc4ba726327e7f107.json
+
+*.json
+
+*.json
