@@ -40,6 +40,12 @@ img {
 	padding: 15px;
 }
 
+p,
+span,
+div {
+	line-height: 25px;
+}
+
 
 a,
 a:active {
@@ -97,6 +103,11 @@ a:hover {
 .xlarge-spacing-left {
 	padding-left: 20px;
 }
+
+.xlarge-spacing-bottom {
+	padding-bottom: 20px;
+}
+
 
 .float-left {
 	float: left;
