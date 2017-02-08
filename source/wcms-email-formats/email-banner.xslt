@@ -72,7 +72,7 @@
 
     <!-- NEWSLETTER FEATURE HEADLINE AND TEASER -->
 
-    <xsl:if test="teaser != ''">
+    <xsl:if test="headline != ''">
       <tr>
         <td align="left" class="mWidth large-spacing-left large-spacing-right align-left">
           <!-- HEADLINE -->
@@ -82,8 +82,10 @@
             </xsl:if>
           </xsl:for-each>
         </td>
-      </tr> 
+      </tr>
+    </xsl:if>  
           <!-- END HEADLINE -->
+      <xsl:if test="teaser != ''">
       <tr>
         <td align="left" class="mWidth large-spacing-left large-spacing-right  spacing-bottom align-left">
           <!-- TEASER-->
