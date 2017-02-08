@@ -72,20 +72,26 @@
 
     <!-- NEWSLETTER FEATURE HEADLINE AND TEASER -->
 
-    <xsl:if test="teaser != ''">
+    <xsl:if test="headline != ''">
       <tr>
-        <td align="left" class="mWidth content align-left">
+        <td align="left" class="mWidth large-spacing-left large-spacing-right align-left">
           <!-- HEADLINE -->
           <xsl:for-each select="headline">
             <xsl:if test=". != ''">
               <xsl:copy-of select="$headline-optional-url"/>
             </xsl:if>
           </xsl:for-each>
+        </td>
+      </tr>
+    </xsl:if>  
           <!-- END HEADLINE -->
+      <xsl:if test="teaser != ''">
+      <tr>
+        <td align="left" class="mWidth large-spacing-left large-spacing-right  spacing-bottom align-left">
           <!-- TEASER-->
             <xsl:for-each select="teaser">
               <xsl:if test=". != ''">
-                <p><xsl:copy-of select="node()"/></p>
+                <span><xsl:copy-of select="node()"/></span>
               </xsl:if>
             </xsl:for-each>
           <!-- END TEASER-->
