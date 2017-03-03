@@ -23,9 +23,9 @@
       <xsl:when test="system-data-structure/footer/content/system-data-structure/social-group/social-link/social-site != '' and system-data-structure/footer/content/system-data-structure/social-group/social-link/social-url != ''">
         <table cellpadding="0" cellspacing="0" style="width: 300px;" summary="UC Santa Cruz follow us on social media">
           <tbody>
-            <!-- Campaign button code goes here -->
+            <!-- Campaign variable button -->
             <xsl:copy-of select="$campaign-btn"/>
-            <!-- End campaign button code -->
+            <!-- End campaign button -->
             <tr>
                 <td align="center" class="footer-title" colspan="5">
                     <h3>Follow us</h3>
