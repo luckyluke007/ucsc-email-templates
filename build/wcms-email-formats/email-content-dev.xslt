@@ -24,7 +24,7 @@
                 <tr>
                   <td class="mWidth spacing-left large-spacing-top"><img alt="{image-alt}" class="mFullImage" src="{image/path}" width="295"/></td>
                 <tr>
-                  <td class="mWidth spacing-left text"><xsl:value-of select="$caption"/></td>
+                  <td class="mWidth spacing-left xlarge-spacing-bottom"><xsl:value-of select="$caption"/></td>
                 </tr>
                   </tr>
                 
@@ -39,7 +39,7 @@
     <!-- FEATURE TEASER TEXT/ADMIN TEXT/FEATURE EVENT TEXT -->
     <xsl:for-each select="system-data-structure/feature/content">
       <xsl:if test=". != ''">
-        <td align="left" class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right uscs-text" width="610">
+        <td align="left" class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right content-text" width="610">
           <xsl:copy-of select="$administrative-image"/>
           <xsl:copy-of select="node()"/></td>
       </xsl:if>
@@ -50,7 +50,7 @@
       <!-- Additional section title -->
       <xsl:if test="title != ''">
         <tr>
-          <td align="left" class="mWidth ucsc-yellow-title section-title align-left"><xsl:value-of select="title"/></td>
+          <td align="left" class="mWidth section-title align-left"><h2> <xsl:value-of select="title"/> </h2></td>
         </tr>
       </xsl:if>
       <!-- Additional section title -->
@@ -71,7 +71,7 @@
         <xsl:variable name="headline-optional-url">
           <xsl:choose>
             <xsl:when test="asset-link/link != '' or url != ''">
-              <a href="{asset-link/link}{url}{$trackingURL}"> <xsl:value-of select="headline"/> </a>
+              <h3> <a href="{asset-link/link}{url}{$trackingURL}"> <xsl:value-of select="headline"/> </a> </h3>
             </xsl:when>
             <xsl:otherwise>
               <h3> <xsl:value-of select="headline"/> </h3>
@@ -82,7 +82,7 @@
         <xsl:choose>
           <xsl:when test="image/link != ''">
             <tr>
-              <td class="mWidth spacing-bottom section-content"><!-- Left image column -->
+              <td class="mWidth section-content"><!-- Left image column -->
                 
                 <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
                   <tr>
@@ -101,20 +101,15 @@
                 
                 <table align="right" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="340">
                   <tr>
-                    <td class="mWidth spacing-top align-left ucsc-title">
+                    <td class="mWidth spacing-top align-left content-text">
                       <xsl:if test="headline != ''">
                         <xsl:copy-of select="$headline-optional-url"/>
                       </xsl:if>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="mWidth spacing-top align-left ucsc-text">
                       <xsl:for-each select="section-text">
                         <xsl:if test=". !='' ">
                           <xsl:copy-of select="node()"/>
                         </xsl:if>
-                      </xsl:for-each>
-                    </td>
+                      </xsl:for-each></td>
                   </tr>
                 </table>
                 
@@ -124,14 +119,10 @@
           <xsl:otherwise>
             <!-- No image full column text -->
             <tr>
-              <td class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right ucsc-title">
+              <td class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right content-text">
                 <xsl:if test="headline != ''">
                   <xsl:copy-of select="$headline-optional-url"/>
                 </xsl:if>
-              </td>
-            </tr>
-            <tr>
-              <td class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right ucsc-text">
                 <xsl:for-each select="section-text">
                   <xsl:if test=". !='' ">
                     <xsl:copy-of select="node()"/>
@@ -251,7 +242,7 @@
                             <xsl:if test="headline != ''">
                               <xsl:copy-of select="$headline-optional-url"/>
                             </xsl:if>
-                            <p class="text">
+                            <p>
                               <xsl:for-each select="teaser">
                                 <xsl:if test=". !='' ">
                                   <xsl:copy-of select="node()"/>
@@ -275,11 +266,11 @@
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth align-left spacing-top-bottom">
+                          <td align="left" class="mWidth align-left spacing-top-bottom content-text">
                             <xsl:if test="headline != ''">
                               <xsl:copy-of select="$headline-optional-url"/>
                             </xsl:if>
-                            <p class="text">
+                            <p>
                               <xsl:for-each select="teaser">
                                 <xsl:if test=". !='' ">
                                   <xsl:copy-of select="node()"/>
@@ -303,15 +294,15 @@
                       <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="{headline}" width="190">
                         <xsl:if test="image/name != ''">
                           <tr>
-                            <td class="mWidth xlarge-spacing-right"><xsl:copy-of select="$three-image-optional-url"/></td>
+                            <td class="mWidth large-spacing-right"><xsl:copy-of select="$three-image-optional-url"/></td>
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth xlarge-spacing-right align-left spacing-top-bottom">
+                          <td align="left" class="mWidth large-spacing-right align-left spacing-top-bottom content-text">
                             <xsl:if test="headline != ''">
                               <xsl:copy-of select="$headline-optional-url"/>
                             </xsl:if>
-                            <p class="text">
+                            <p>
                               <xsl:for-each select="teaser">
                                 <xsl:if test=". !='' ">
                                   <xsl:copy-of select="node()"/>
@@ -333,11 +324,11 @@
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth align-left spacing-top-bottom">
+                          <td align="left" class="mWidth align-left spacing-top-bottom content-text">
                             <xsl:if test="headline != ''">
                               <xsl:copy-of select="$headline-optional-url"/>
                             </xsl:if>
-                            <p class="text">
+                            <p>
                               <xsl:for-each select="teaser">
                                 <xsl:if test=". !='' ">
                                   <xsl:copy-of select="node()"/>
@@ -360,7 +351,7 @@
                     <xsl:if test="headline != ''">
                       <xsl:copy-of select="$headline-optional-url"/>
                     </xsl:if>
-                    <p class="text">
+                    <p>
                       <xsl:for-each select="teaser">
                         <xsl:if test=". !='' ">
                           <xsl:copy-of select="node()"/>
@@ -427,18 +418,18 @@
                       
                       <table align="right" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="340">
                         <tr>
-                          <td class="mWidth spacing-top align-left">
+                          <td class="mWidth spacing-top align-left content-text">
                             <xsl:if test="headline != ''">
                               <xsl:copy-of select="$headline-optional-url"/>
                             </xsl:if>
-                                <p class="text">
-                                <xsl:for-each select="teaser">
-                                  <xsl:if test=". !='' ">
-                                    <xsl:copy-of select="node()"/>
-                                  </xsl:if>
-                                </xsl:for-each>
-                                </p>
-                            </td>
+                            <p>
+                              <xsl:for-each select="teaser">
+                                <xsl:if test=". !='' ">
+                                  <xsl:copy-of select="node()"/>
+                                </xsl:if>
+                              </xsl:for-each>
+                            </p>
+                          </td>
                         </tr>
                       </table>
                       
@@ -448,18 +439,18 @@
                 <xsl:otherwise>
                   <!-- No image full column text -->
                   <tr>
-                    <td class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right">
+                    <td class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right content-text">
                       <xsl:if test="headline != ''">
                         <xsl:copy-of select="$headline-optional-url"/>
                       </xsl:if>
-                          <p class="text">
-                          <xsl:for-each select="teaser">
-                            <xsl:if test=". !='' ">
-                              <xsl:copy-of select="node()"/>
-                            </xsl:if>
-                          </xsl:for-each>
-                          </p>
-                      </td>
+                      <p>
+                        <xsl:for-each select="teaser">
+                          <xsl:if test=". !='' ">
+                            <xsl:copy-of select="node()"/>
+                          </xsl:if>
+                        </xsl:for-each>
+                      </p>
+                    </td>
                   </tr>
                   <!-- End no image full column text -->
                 </xsl:otherwise>
