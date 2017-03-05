@@ -115,6 +115,9 @@ img {
   display: block;
   padding-bottom: 5px; }
 
+.content-text img {
+  display: inline-block !important; }
+
 .logo {
   padding: 15px; }
 
