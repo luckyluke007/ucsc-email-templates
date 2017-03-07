@@ -26,13 +26,13 @@ table {
 	display: block !important;
 }
 
+.content-text img {
+	display: inline-block !important;
+}
+
 img {
 	display: block;
 	padding-bottom: 5px;
-}
-
-.content-text img {
-	display: inline-block !important;
 }
 
 .logo {
@@ -43,14 +43,6 @@ img {
 	background: $brand-blue;
 	padding: 15px;
 }
-
-p,
-span,
-div {
-	line-height: 22px;
-	padding: 0 0 16px;
-}
-
 
 a,
 a:active {

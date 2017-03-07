@@ -40,8 +40,7 @@ h4 {
 p,
 span,
 div {
-  line-height: 22px;
-  padding: 0 0 16px; }
+  font-size: 16px; }
 
 .uppercase {
   text-transform: uppercase; }
@@ -92,14 +91,14 @@ div {
 body,
 html {
   color: #333;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 20px;
   margin: 10px auto;
   padding: 0; }
 
 table, td {
   border-collapse: collapse !important;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; }
 
 table {
   mso-table-lspace: 0pt;
@@ -112,9 +111,6 @@ table {
 .block {
   display: block !important; }
 
-.content-text img {
-  display: inline-block !important; }
-
 img {
   display: block;
   padding-bottom: 5px; }
@@ -125,6 +121,11 @@ img {
 .logo-blue {
   background: #00458c;
   padding: 15px; }
+
+p,
+span,
+div {
+  line-height: 22px; }
 
 a,
 a:active {
@@ -205,7 +206,7 @@ a:hover {
 
 .section-content {
   color: #333;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
   padding-left: 15px;
   padding-right: 15px; }
 
@@ -259,4 +260,4 @@ a:hover {
 
 img[align="absmiddle"],
 img[align="middle"] {
-  margin: 0 auto; }
+  margin: 0 auto !important; }
