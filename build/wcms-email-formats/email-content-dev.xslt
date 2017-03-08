@@ -82,7 +82,7 @@
         <xsl:choose>
           <xsl:when test="image/link != ''">
             <tr>
-              <td class="mWidth section-content"><!-- Left image column -->
+              <td class="mWidth section-content content-text"><!-- Left image column -->
                 
                 <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
                   <tr>
@@ -238,7 +238,7 @@
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth align-left spacing-top-bottom">
+                          <td align="left" class="mWidth align-left spacing-top-bottom content-text">
                             <xsl:if test="headline != ''">
                               <xsl:copy-of select="$headline-optional-url"/>
                             </xsl:if>
@@ -399,7 +399,7 @@
               <xsl:choose>
                 <xsl:when test="image/link != ''">
                   <tr>
-                    <td class="mWidth section-content"><!-- Left image column -->
+                    <td class="mWidth section-content content-text"><!-- Left image column -->
                       
                       <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
                         <tr>

@@ -87,7 +87,7 @@
           <!-- END HEADLINE -->
       <xsl:if test="teaser != ''">
       <tr>
-        <td align="left" class="mWidth large-spacing-left large-spacing-right spacing-bottom align-left">
+        <td align="left" class="mWidth large-spacing-left large-spacing-right spacing-bottom align-left content-text">
           <!-- TEASER-->
             <xsl:for-each select="teaser">
               <xsl:if test=". != ''">
