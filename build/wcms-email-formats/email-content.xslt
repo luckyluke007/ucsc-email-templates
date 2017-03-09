@@ -398,7 +398,7 @@
               <xsl:choose>
                 <xsl:when test="image/link != ''">
                   <tr>
-                    <td class="mWidth section-content"><!-- Left image column -->
+                    <td class="mWidth section-content spacing-bottom"><!-- Left image column -->
                       
                       <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
                         <tr>
