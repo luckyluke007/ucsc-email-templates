@@ -74,7 +74,7 @@
 
     <xsl:if test="headline != ''">
       <tr>
-        <td align="left" class="mWidth large-spacing-left large-spacing-right align-left">
+        <td align="left" class="mWidth large-spacing-left large-spacing-right spacing-bottom-top align-left">
           <!-- HEADLINE -->
           <xsl:for-each select="headline">
             <xsl:if test=". != ''">
