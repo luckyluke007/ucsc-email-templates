@@ -22,7 +22,7 @@
   .mobileHeaderWidth .em-dockitem-empty, .mobileFooterWidth .em-dockitem-empty, .emWrapperTable, .emWrapperCell { width:100% !important; }
   div { padding:0px !important; }
   h1, h2, h3, h4, h5, h6 { display:block; margin:0px; }
-  p { margin:0em 0em 1em; margin-bottom:1em; }	
+  p, div, span { margin:0em 0em 1em; margin-bottom:1em; }	
 
 /*------------------------------------*\
    MOBILE STYLES
@@ -112,4 +112,3 @@
       }
 
  }
-		
