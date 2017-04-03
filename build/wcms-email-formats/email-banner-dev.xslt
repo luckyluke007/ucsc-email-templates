@@ -71,33 +71,30 @@
     <!-- END BILLBOARD HTML -->
 
     <!-- NEWSLETTER FEATURE HEADLINE AND TEASER -->
-
-    <xsl:if test="headline != ''">
+    <xsl:if test="system-data-structure/feature != '/'">
       <tr>
-        <td align="left" class="mWidth large-spacing-left large-spacing-right align-left">
-          <!-- HEADLINE -->
-          <xsl:for-each select="headline">
-            <xsl:if test=". != ''">
-              <xsl:copy-of select="$headline-optional-url"/>
-            </xsl:if>
-          </xsl:for-each>
-        </td>
-      </tr>
-    </xsl:if>  
-          <!-- END HEADLINE -->
-      <xsl:if test="teaser != ''">
-      <tr>
-        <td align="left" class="mWidth large-spacing-left large-spacing-right spacing-bottom align-left content-text">
-          <!-- TEASER-->
-            <xsl:for-each select="teaser">
+        <td align="left" class="mWidth large-spacing-left large-spacing-right spacing-bottom align-left">
+          <xsl:if test="headline != ''">
+            <!-- HEADLINE -->
+            <xsl:for-each select="headline">
               <xsl:if test=". != ''">
-                <span><xsl:copy-of select="node()"/></span>
+                <xsl:copy-of select="$headline-optional-url"/>
               </xsl:if>
             </xsl:for-each>
-          <!-- END TEASER-->
+          </xsl:if>  
+              <!-- END HEADLINE -->
+          <xsl:if test="teaser != ''">
+            <!-- TEASER-->
+              <xsl:for-each select="teaser">
+                <xsl:if test=". != ''">
+                  <span><xsl:copy-of select="node()"/></span>
+                </xsl:if>
+              </xsl:for-each>
+            <!-- END TEASER-->
+          </xsl:if>  
         </td>
-      </tr> 
-    </xsl:if>      
+      </tr>
+    </xsl:if>    
     <!-- END NEWSLETTER FEATURE HEADLINE AND TEASER-->
       
   </xsl:template>
