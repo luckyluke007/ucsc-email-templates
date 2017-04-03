@@ -188,10 +188,10 @@
               <xsl:variable name="single-image-url">
                 <xsl:choose>
                   <xsl:when test="asset-link/link != '' or url != ''">
-                    <a href="{asset-link/link}{url}{$trackingURL}"> <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="610"/></a>
+                    <a href="{asset-link/link}{url}{$trackingURL}"> <img align="center" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="610"/></a>
                   </xsl:when>
                   <xsl:otherwise>
-                    <img align="left" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="610"/>
+                    <img align="center" alt="{image-alt}" border="0" class="mFullImage" src="{image/path}" width="610"/>
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:variable>
@@ -343,21 +343,27 @@
                   <!-- End last 3 columns item -->
                 </xsl:when>
 
-                <!-- single column -->
+                <!-- single column 610-->
                 <xsl:otherwise>
-                    <xsl:if test="image/name != ''">
-                      <xsl:copy-of select="$single-image-url"/>
-                    </xsl:if>
-                    <xsl:if test="headline != ''">
-                      <xsl:copy-of select="$headline-optional-url"/>
-                    </xsl:if>
-                    <p>
-                      <xsl:for-each select="teaser">
-                        <xsl:if test=". !='' ">
-                          <xsl:copy-of select="node()"/>
+                  <xsl:if test="image/name != ''">
+                    <xsl:copy-of select="$single-image-url"/>
+                  </xsl:if>
+                  <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="{headline}" width="610">
+                    <tr>
+                      <td align="left" class="mWidth align-left spacing-bottom content-text">
+                        <xsl:if test="headline != ''">
+                          <xsl:copy-of select="$headline-optional-url"/>
                         </xsl:if>
-                      </xsl:for-each>
-                    </p>  
+                        <p>
+                          <xsl:for-each select="teaser">
+                            <xsl:if test=". !='' ">
+                              <xsl:copy-of select="node()"/>
+                            </xsl:if>
+                          </xsl:for-each>
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
                 </xsl:otherwise>
                 <!-- end single column -->
               </xsl:choose>
