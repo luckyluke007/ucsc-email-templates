@@ -86,7 +86,7 @@
           <!-- TEASER-->
             <xsl:for-each select="teaser">
               <xsl:if test=". != ''">
-                <span><xsl:copy-of select="node()"/></span>
+                <xsl:copy-of select="node()"/>
               </xsl:if>
             </xsl:for-each>
           <!-- END TEASER-->

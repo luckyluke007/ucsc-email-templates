@@ -39,7 +39,7 @@
       <xsl:choose>
         <xsl:when test="url != '' or asset-link/link !='' ">
           <a href="{url}{asset-link/link}{$trackingURL}">
-            <img alt="{$feature-alt}" class="mFullImage" src="{$feature-image}" width="640"/>
+            <img alt="{$feature-alt}" class="mFullImage" src="{$feature-image}" width="640" border="0"/>
           </a>
         </xsl:when>
         <xsl:otherwise>
@@ -71,27 +71,23 @@
     <!-- END BILLBOARD HTML -->
 
     <!-- NEWSLETTER FEATURE HEADLINE AND TEASER -->
-    <xsl:if test="system-data-structure/feature != '/'">
+    <xsl:if test="headline != ''">
       <tr>
         <td align="left" class="mWidth large-spacing-left large-spacing-right spacing-bottom align-left">
+          <!-- HEADLINE -->
           <xsl:if test="headline != ''">
-            <!-- HEADLINE -->
             <xsl:for-each select="headline">
-              <xsl:if test=". != ''">
-                <xsl:copy-of select="$headline-optional-url"/>
-              </xsl:if>
+              <xsl:copy-of select="$headline-optional-url"/>
             </xsl:for-each>
           </xsl:if>  
-              <!-- END HEADLINE -->
+          <!-- END HEADLINE -->
+          <!-- TEASER-->
           <xsl:if test="teaser != ''">
-            <!-- TEASER-->
-              <xsl:for-each select="teaser">
-                <xsl:if test=". != ''">
-                  <span><xsl:copy-of select="node()"/></span>
-                </xsl:if>
-              </xsl:for-each>
-            <!-- END TEASER-->
-          </xsl:if>  
+            <xsl:for-each select="teaser">
+              <xsl:copy-of select="node()"/>
+            </xsl:for-each>
+          </xsl:if> 
+          <!-- END TEASER-->
         </td>
       </tr>
     </xsl:if>    
