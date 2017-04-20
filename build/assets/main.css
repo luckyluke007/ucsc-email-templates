@@ -26,7 +26,10 @@ h2,
 
 h3,
 .ucsc-title {
-  font-size: 19px; }
+  font-size: 19px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
 
 h4 {
   font-size: 16px; }
@@ -112,6 +115,9 @@ table {
   table-layout: fixed;
   margin: 0 auto; }
 
+td {
+  line-height: 22px; }
+
 .block {
   display: block !important; }
 
@@ -157,7 +163,7 @@ a:hover {
   padding-bottom: 15px; }
 
 .large-spacing-bottom {
-  padding-bottom: 20px; }
+  padding-bottom: 35px; }
 
 .spacing-left {
   padding-left: 10px; }
