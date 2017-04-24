@@ -71,27 +71,28 @@
     <!-- END BILLBOARD HTML -->
 
     <!-- NEWSLETTER FEATURE HEADLINE AND TEASER -->
-
-    <xsl:if test="teaser != ''">
-      <tr>
-        <td align="left" class="mWidth content align-left">
+    <tr>
+      <td align="left" class="mWidth large-spacing-left large-spacing-right spacing-bottom align-left">
+        <xsl:if test="headline != ''">
           <!-- HEADLINE -->
           <xsl:for-each select="headline">
             <xsl:if test=". != ''">
               <xsl:copy-of select="$headline-optional-url"/>
             </xsl:if>
           </xsl:for-each>
+        </xsl:if>  
           <!-- END HEADLINE -->
+        <xsl:if test="teaser != ''">
           <!-- TEASER-->
             <xsl:for-each select="teaser">
               <xsl:if test=". != ''">
-                <p><xsl:copy-of select="node()"/></p>
+                <xsl:copy-of select="node()"/>
               </xsl:if>
             </xsl:for-each>
           <!-- END TEASER-->
-        </td>
-      </tr> 
-    </xsl:if>      
+      </xsl:if>
+      </td>
+    </tr>     
     <!-- END NEWSLETTER FEATURE HEADLINE AND TEASER-->
       
   </xsl:template>

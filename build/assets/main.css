@@ -14,16 +14,22 @@ h6 {
   font-weight: normal;
   line-height: 1.25em; }
 
-h1 {
+h1,
+.ucsc-email-title {
   font-size: 32px;
   margin: 0; }
 
-h2 {
+h2,
+.ucsc-yellow-title {
   font-size: 24px;
   margin: 0; }
 
-h3 {
-  font-size: 19px; }
+h3,
+.ucsc-title {
+  font-size: 19px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
 
 h4 {
   font-size: 16px; }
@@ -34,16 +40,25 @@ h5 {
 h4 {
   font-size: 13px; }
 
-p {
-  font-size: 16px; }
+p .p1 {
+  text-align: inherit; }
+
+p,
+span,
+div {
+  line-height: 22px;
+  padding: 0 0 16px; }
 
 .uppercase {
   text-transform: uppercase; }
 
+.email-title {
+  color: #000;
+  padding: 0 15px 10px; }
+
 .title {
   color: #000;
-  padding: 0 15px 10px;
-  width: 640px; }
+  padding: 0 0 10px; }
 
 .section-title {
   border-bottom: 2px solid #ffc500;
@@ -100,8 +115,14 @@ table {
   table-layout: fixed;
   margin: 0 auto; }
 
+td {
+  line-height: 22px; }
+
 .block {
   display: block !important; }
+
+.content-text img {
+  display: inline-block !important; }
 
 img {
   display: block;
@@ -122,9 +143,16 @@ a:active {
 a:hover {
   text-decoration: underline; }
 
+.spacing-top-content {
+  padding-top: 10px; }
+
 .spacing-top {
   padding-bottom: 5px;
-  padding-top: 10px; }
+  padding-top: 0; }
+
+.spacing-bottom-top {
+  padding-bottom: 10px;
+  padding-top: 5px; }
 
 .large-spacing-top {
   padding-bottom: 5px;
@@ -136,6 +164,9 @@ a:hover {
 
 .spacing-bottom {
   padding-bottom: 15px; }
+
+.large-spacing-bottom {
+  padding-bottom: 35px; }
 
 .spacing-left {
   padding-left: 10px; }
@@ -150,13 +181,16 @@ a:hover {
   padding-right: 15px; }
 
 .xlarge-spacing-right {
-  padding-right: 20px; }
+  padding-right: 18px; }
 
 .large-spacing-left {
   padding-left: 15px; }
 
 .xlarge-spacing-left {
   padding-left: 20px; }
+
+.xlarge-spacing-bottom {
+  padding-bottom: 20px; }
 
 .float-left {
   float: left; }
@@ -177,14 +211,13 @@ a:hover {
   background: #f2f5f8;
   display: block;
   margin: 0 auto;
-  padding: 0;
-  width: 640px; }
+  padding: 0; }
 
 .full-width {
   padding: 0; }
 
 .content {
-  padding: 10px 20px; }
+  padding: 10px 15px; }
 
 .caption {
   padding: 5px 15px; }

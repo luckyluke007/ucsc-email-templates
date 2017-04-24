@@ -1,0 +1,106 @@
+/*------------------------------------*\
+   EMAIL CLIENT SPECIFIC STYLES
+\*------------------------------------*/
+  .ReadMsgBody, .ExternalClass { width:100%; } /* Force Hotmail/Outlook.com to display emails at full width */  
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height:100%; } /* Force Hotmail/Outlook.com to display normal line spacing */
+  body, table, td, p, a, li, blockquote { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; } /* Prevent WebKit and Windows mobile from changing default text sizes */
+  table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; } /* Removes spacing between tables in Outlook 2007 and up */
+  img { -ms-interpolation-mode:bicubic; } /* Allows smoother rendering of resized images in Internet Explorer */
+  .footer a { color:/*#ffffff*/; text-decoration:none; } /* Add this class to the system footer to change the unsubscribe link ---does not work for Gmail--- */
+  .iOSfix a { color:/*#ffffff*/; text-decoration:none; } /* Override the default blue link style that iOS puts on address and phone numbers */
+  .iOSfixaside a { color:/*#000000*/; text-decoration:none; } /* Alternate Style - Override the default blue link style that iOS puts on address and phone numbers */
+  .em-dragdrop-dummy { display:none!important; }
+
+/*------------------------------------*\
+   REMOVE iMODULES View email in the browser
+\*------------------------------------*/
+
+#divHostedEmailLink {
+  text-align: center;
+  padding: 5px 0 10px;
+  margin: 5px 0 10px;
+} 
+
+/*------------------------------------*\
+   RESET STYLES
+\*------------------------------------*/
+  body { min-width:100% !important; }
+  html { width:100%; }
+  img { border:0; height:auto; line-height:100%; outline:none; text-decoration:none; }
+  table { border-collapse:collapse !important; }
+  body, .emWrapperTable, .emWrapperCell { height:100% !important; margin:0; padding:0; }  
+  .mobileHeaderWidth .em-dockitem-empty, .mobileFooterWidth .em-dockitem-empty, .emWrapperTable, .emWrapperCell { width:100% !important; }
+  div { padding:0px !important; }
+  h1, h2, h3, h4, h5, h6 { display:block; margin:0px; }
+  p { margin:0em 0em 1em; margin-bottom:1em; }
+
+/* my styles */
+img[align="absmiddle"],
+img[align="middle"] {
+  margin: 0 auto !important; }
+
+/*------------------------------------*\
+   MOBILE STYLES
+\*------------------------------------*/  
+  @media only screen and (max-device-width: 720px)  {
+  td[class="mobileHeaderCell"],
+  td[class="mobileColumnCell"],
+  td[class="mobileFooterCell"],
+    td[class="mWidth"] { display:block !important; }
+  table[class="mobileHeaderWidth"],
+  table[class="mobileColumnWidth"],
+  table[class="mobileFooterWidth"],
+  td[class="mobileHeaderCell"],
+  td[class="mobileColumnCell"],
+  td[class="mobileFooterCell"] { width:100%!important; }
+  *[class="mWidth"] { width:100%!important; }
+  
+  /* general display styles */
+  td { -webkit-box-sizing:border-box; box-sizing:border-box; }
+  *[class="mHide"] { display:none!important; }
+  *[class="mBreak"] { display:block!important; }
+  *[class="mTextCenter"] { text-align:center!important; }
+  *[class="mCenter"] { margin:0px auto!important; }
+  
+  /* link styles */
+  
+  /* image styles */
+  img[class="mFullImage"] { width:100%!important; height:auto!important; }
+        
+   
+         h1,
+        .title {
+           font-size: 40px !important;
+        }
+
+        h2,
+        .section-title {
+           font-size: 35px !important;
+        }
+
+        h3 {
+           font-size: 30px !important;
+        }
+   
+       p,
+       div,
+       span,
+       p strong,
+       p i,
+       p a {
+          font-size: 25px !important;
+          line-height: 40px !important;
+       }
+       
+       .mWidth p a {
+          font-size: 25px !important;
+          line-height: 40px !important;
+       }
+
+       p strong {
+             font-weight: bold;
+       }
+
+  } 
+
+    

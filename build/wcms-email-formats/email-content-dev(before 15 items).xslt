@@ -80,7 +80,7 @@
         <xsl:choose>
           <xsl:when test="image/link != ''">
             <tr>
-              <td class="mWidth section-content large-spacing-bottom content-text"><!-- Left image column -->
+              <td class="mWidth section-content content-text"><!-- Left image column -->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
                   <tr>
                     <td class="mWidth">
@@ -115,7 +115,7 @@
           <xsl:otherwise>
             <!-- No image full column text -->
             <tr>
-              <td class="mWidth spacing-top large-spacing-bottom large-spacing-left large-spacing-right content-text">
+              <td class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right content-text">
                 <xsl:if test="headline != ''">
                   <xsl:copy-of select="$headline-optional-url"/>
                 </xsl:if>
@@ -237,7 +237,7 @@
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth align-left spacing-top-bottom content-text large-spacing-bottom">
+                          <td align="left" class="mWidth align-left spacing-top-bottom content-text">
                             <xsl:if test="headline != ''">
                               <xsl:copy-of select="$headline-optional-url"/>
                             </xsl:if>
@@ -265,7 +265,7 @@
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth align-left spacing-top-bottom content-text large-spacing-bottom">
+                          <td align="left" class="mWidth align-left spacing-top-bottom content-text">
                             <xsl:if test="headline != ''">
                               <xsl:copy-of select="$headline-optional-url"/>
                             </xsl:if>
@@ -296,7 +296,7 @@
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth large-spacing-right align-left spacing-top-bottom content-text large-spacing-bottom">
+                          <td align="left" class="mWidth large-spacing-right align-left spacing-top-bottom content-text">
                             <xsl:if test="headline != ''">
                               <xsl:copy-of select="$headline-optional-url"/>
                             </xsl:if>
@@ -321,7 +321,7 @@
                           </tr>
                         </xsl:if>
                         <tr>
-                          <td align="left" class="mWidth align-left spacing-top-bottom content-text large-spacing-bottom">
+                          <td align="left" class="mWidth align-left spacing-top-bottom content-text">
                             <xsl:if test="headline != ''">
                               <xsl:copy-of select="$headline-optional-url"/>
                             </xsl:if>
@@ -339,71 +339,14 @@
                   <!-- End last 3 columns item -->
                 </xsl:when>
 
-                <!-- more than 3 items in column -->
-                <xsl:when test="$item-count > 3">
-                  <xsl:choose>
-                    <xsl:when test="image/link != ''">
-                      <tr>
-                        <td class="mWidth section-content content-text large-spacing-bottom">
-                          <!-- Left image column -->
-                          <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
-                            <tr>
-                              <td class="mWidth">
-                                <!-- IMG URL VARIABLE HERE -->
-                                <xsl:copy-of select="$image-left-url"/>
-                              </td>
-                            </tr>
-                          </table>
-                          <!-- End left image column -->
-                          <!-- variable in variable includes -->
-                          <xsl:copy-of select="$outlook-split-two"/>
-                          <!-- Right text column with headline -->
-                          <table align="right" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="340">
-                            <tr>
-                              <td class="mWidth spacing-top align-left content-text large-spacing-bottom">
-                                <xsl:if test="headline != ''">
-                                  <xsl:copy-of select="$headline-optional-url"/>
-                                </xsl:if>
-                                <xsl:for-each select="teaser">
-                                  <xsl:if test=". !='' ">
-                                    <xsl:copy-of select="node()"/>
-                                  </xsl:if>
-                                </xsl:for-each>
-                              </td>
-                            </tr>
-                          </table>
-                          <!-- End right text column with headline -->
-                        </td>
-                      </tr>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <!-- No image full column text -->
-                      <tr>
-                        <td class="mWidth spacing-top large-spacing-bottom large-spacing-left large-spacing-right content-text">
-                          <xsl:if test="headline != ''">
-                            <xsl:copy-of select="$headline-optional-url"/>
-                          </xsl:if>
-                          <xsl:for-each select="teaser">
-                            <xsl:if test=". !='' ">
-                              <xsl:copy-of select="node()"/>
-                            </xsl:if>
-                          </xsl:for-each>
-                        </td>
-                      </tr>
-                      <!-- End no image full column text -->
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </xsl:when>
-                <!-- end more than 3 items in column -->
-
-                <!-- single column 610 -->
+                <!-- single column 610-->
                 <xsl:otherwise>
                   <xsl:if test="image/name != ''">
                     <xsl:copy-of select="$single-image-url"/>
                   </xsl:if>
                   <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="{headline}" width="610">
                     <tr>
-                      <td align="left" class="mWidth align-left large-spacing-bottom content-text">
+                      <td align="left" class="mWidth align-left spacing-bottom content-text">
                         <xsl:if test="headline != ''">
                           <xsl:copy-of select="$headline-optional-url"/>
                         </xsl:if>
@@ -458,7 +401,7 @@
           <xsl:choose>
             <xsl:when test="image/link != ''">
               <tr>
-                <td class="mWidth section-content large-spacing-bottom content-text"><!-- Left image column -->
+                <td class="mWidth section-content content-text"><!-- Left image column -->
                   
                   <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
                     <tr>
@@ -489,14 +432,14 @@
                       </td>
                     </tr>
                   </table>
-                  <!-- End right text column with headline -->
-                </td>
+                  
+                  <!-- End right text column with headline --></td>
               </tr>
             </xsl:when>
             <xsl:otherwise>
               <!-- No image full column text -->
               <tr>
-                <td class="mWidth spacing-top large-spacing-bottom large-spacing-left large-spacing-right content-text">
+                <td class="mWidth spacing-top spacing-bottom large-spacing-left large-spacing-right content-text">
                   <xsl:if test="headline != ''">
                     <xsl:copy-of select="$headline-optional-url"/>
                   </xsl:if>

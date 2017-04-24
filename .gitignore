@@ -9,4 +9,18 @@ Gruntfile.js
 
 *.tmp
 
+<<<<<<< HEAD
+npm-debug.log
+=======
 *.log
+>>>>>>> master
+
+*.json
+
+*.json
+
+build/assets/.sprockets-manifest-e61a66ab951ade4dc4ba726327e7f107.json
+
+*.json
+
+*.json
