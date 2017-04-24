@@ -80,7 +80,7 @@
         <xsl:choose>
           <xsl:when test="image/link != ''">
             <tr>
-              <td class="mWidth section-content large-spacing-bottom content-text"><!-- Left image column -->
+              <td class="mWidth section-content large-spacing-bottom content-text spacing-top-content"><!-- Left image column -->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
                   <tr>
                     <td class="mWidth">
@@ -115,7 +115,7 @@
           <xsl:otherwise>
             <!-- No image full column text -->
             <tr>
-              <td class="mWidth spacing-top large-spacing-bottom large-spacing-left large-spacing-right content-text">
+              <td class="mWidth spacing-top large-spacing-bottom large-spacing-left large-spacing-right content-text spacing-top-content">
                 <xsl:if test="headline != ''">
                   <xsl:copy-of select="$headline-optional-url"/>
                 </xsl:if>
@@ -153,7 +153,7 @@
       
       <xsl:if test="item-layout = 'Column'">
         <tr>
-          <td class="section-content">
+          <td class="section-content spacing-top-content">
             <xsl:for-each select="item">
               
               <!-- Variable image link (two columns stories side by side) -->
@@ -379,7 +379,7 @@
                     <xsl:otherwise>
                       <!-- No image full column text -->
                       <tr>
-                        <td class="mWidth spacing-top large-spacing-bottom large-spacing-left large-spacing-right content-text">
+                        <td class="mWidth spacing-top large-spacing-bottom large-spacing-left large-spacing-right content-text spacing-top-content">
                           <xsl:if test="headline != ''">
                             <xsl:copy-of select="$headline-optional-url"/>
                           </xsl:if>
@@ -458,7 +458,7 @@
           <xsl:choose>
             <xsl:when test="image/link != ''">
               <tr>
-                <td class="mWidth section-content large-spacing-bottom content-text"><!-- Left image column -->
+                <td class="mWidth section-content large-spacing-bottom content-text spacing-top-content"><!-- Left image column -->
                   
                   <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
                     <tr>
@@ -496,7 +496,7 @@
             <xsl:otherwise>
               <!-- No image full column text -->
               <tr>
-                <td class="mWidth spacing-top large-spacing-bottom large-spacing-left large-spacing-right content-text">
+                <td class="mWidth spacing-top large-spacing-bottom large-spacing-left large-spacing-right content-text spacing-top-content">
                   <xsl:if test="headline != ''">
                     <xsl:copy-of select="$headline-optional-url"/>
                   </xsl:if>
