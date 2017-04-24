@@ -58,9 +58,13 @@ a:hover {
 	text-decoration: underline;
 }
 
+.spacing-top-content {
+	padding-top: 10px;
+}
+
 .spacing-top {
 	padding-bottom: 5px;
-	padding-top: 10px;
+	padding-top: 0;
 }
 
 .spacing-bottom-top {
@@ -85,7 +89,6 @@ a:hover {
 .large-spacing-bottom {
 	padding-bottom: 35px;
 }
-
 
 .spacing-left {
 	padding-left: 10px
