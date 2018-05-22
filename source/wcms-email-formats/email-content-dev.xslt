@@ -98,8 +98,12 @@
         <xsl:choose>
           <xsl:when test="image/link != ''">
             <tr>
+<<<<<<< HEAD
               <td class="mWidth section-content large-spacing-bottom content-text spacing-top-content">
                 <!-- Left image column -->
+=======
+              <td class="mWidth section-content large-spacing-bottom content-text spacing-top-content"><!-- Left image column -->
+>>>>>>> master
                 <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
                   <tr>
                     <td class="mWidth">
@@ -131,9 +135,15 @@
           </xsl:when>
           <xsl:otherwise>
             <!-- No image full column text -->
+<<<<<<< HEAD
             <xsl:if test="headline != '' or section-text != ''">
               <tr>
                 <td class="mWidth spacing-top large-spacing-bottom large-spacing-left large-spacing-right content-text spacing-top-content">
+=======
+            <tr>
+              <td class="mWidth spacing-top large-spacing-bottom large-spacing-left large-spacing-right content-text spacing-top-content">
+                <xsl:if test="headline != ''">
+>>>>>>> master
                   <xsl:copy-of select="$headline-optional-url"/>
                   <xsl:for-each select="section-text">
                     <xsl:if test=". !='' ">
@@ -488,8 +498,13 @@
           <xsl:choose>
             <xsl:when test="image/link != ''">
               <tr>
+<<<<<<< HEAD
                 <td class="mWidth section-content large-spacing-bottom content-text spacing-top-content">
                   <!-- Left image column -->
+=======
+                <td class="mWidth section-content large-spacing-bottom content-text spacing-top-content"><!-- Left image column -->
+                  
+>>>>>>> master
                   <table align="left" border="0" cellpadding="0" cellspacing="0" class="mWidth" summary="test" width="250">
                     <tr>
                       <td class="mWidth">
